@@ -2,11 +2,10 @@
 // 📄 app/[locale]/contact/page.tsx
 // ==========================================================
 // 📬 ContactPage — Get in touch with Nomadia Travels
-// Manual SEO + Metadata setup (no Smart Layer)
 // ==========================================================
 
 import type { Metadata } from "next";
-import { SITE } from "@/config/constants";
+import { generatePageMetadata } from "@/lib/metadata";
 import ContactSection from "@/components/ui_v2/sections/ContactSection/ContactSection";
 import { getContact } from "@/lib/api/contact";
 
@@ -16,60 +15,28 @@ import { getContact } from "@/lib/api/contact";
 type PageParams = { params: Promise<{ locale: string }> };
 
 // --------------------------------------------
-// ⚙️ Manual Metadata
+// ⚙️ Metadata using unified system
 // --------------------------------------------
 export async function generateMetadata({
   params,
 }: PageParams): Promise<Metadata> {
   const { locale } = await params;
 
-  const base = SITE.URL.replace(/\/$/, "");
-  const path = `/${locale}/contact/`;
-  const canonical = `${base}${path}`;
-  const image = `${base}/images/contact/og-contact.webp`;
-
-  return {
+  return generatePageMetadata({
     title: "Contact Nomadia Travels — Tours, Car Rentals & Custom Adventures",
     description:
       "Get in touch with Nomadia Travels for tailor-made tours, car rentals, and authentic experiences across Kyrgyzstan.",
-
-    metadataBase: new URL(SITE.URL),
-
-    alternates: {
-      canonical,
-      languages: {
-        en: `${base}/en/contact/`,
-        fr: `${base}/fr/contact/`,
-        "x-default": `${base}/contact/`,
-      },
-    },
-
-    openGraph: {
-      title: "Contact Nomadia Travels — Tours, Car Rentals & Custom Adventures",
-      description:
-        "Get in touch with Nomadia Travels for tailor-made tours, car rentals, and authentic experiences across Kyrgyzstan.",
-      url: canonical,
-      siteName: SITE.NAME,
-      type: "website",
-      images: [
-        {
-          url: image,
-          width: 1200,
-          height: 630,
-          alt: "Nomadia Travels contact page — Kyrgyzstan tours & rentals",
-        },
-      ],
-    },
-
-    twitter: {
-      card: "summary_large_image",
-      site: "@nomadia_travels",
-      title: "Contact Nomadia Travels — Tours, Car Rentals & Custom Adventures",
-      description:
-        "Get in touch with Nomadia Travels for tailor-made tours, car rentals, and authentic experiences across Kyrgyzstan.",
-      images: [image],
-    },
-  };
+    locale,
+    path: "/contact",
+    image: "/images/contact/og-contact.webp",
+    keywords: [
+      "Contact",
+      "Nomadia Travels",
+      "Kyrgyzstan Tours",
+      "Car Rental",
+      "Travel Agency",
+    ],
+  });
 }
 
 // --------------------------------------------

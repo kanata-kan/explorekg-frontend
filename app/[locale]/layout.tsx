@@ -12,6 +12,7 @@ import NextIntlProviderWrapper from "@/components/providers/NextIntlProviderWrap
 import Navbar from "@/components/ui_v2/navigation/Navbar";
 import Footer from "@/components/ui_v2/Footer/Footer";
 import ServerMetaLinks from "@/lib/seo/ServerMetaLinks";
+import { SiteJsonLd } from "@/lib/seo/JsonLd";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -88,6 +89,8 @@ export default async function RootLayout({
       <head>
         {/* Inject locale-aware canonical + hreflang links */}
         <ServerMetaLinks locale={locale} path={path} />
+        {/* Inject JSON-LD structured data for Google Rich Results */}
+        <SiteJsonLd />
       </head>
       <body>
         <StyledComponentsRegistry>
