@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, useTheme } from "styled-components";
 import { AiOutlineClose } from "react-icons/ai";
+import { colorScales } from "@/styles/tokens/colorScales";
 
 type Props = {
   onClick?: () => void;
@@ -68,20 +69,29 @@ export default function CloseButton({
   onClick,
   size = 46,
   stroke = 2,
-  color = "#ef4444",
-  hoverColor = "#fff",
-  ring = "#ef4444",
-  hoverRing = "#ef4444",
-  glow = "rgba(239,68,68,0.45)",
+  color,
+  hoverColor,
+  ring,
+  hoverRing,
+  glow,
   ariaLabel = "Close",
 }: Props) {
+  const theme = useTheme();
+
+  // Use theme colors as defaults
+  const defaultColor = color || colorScales.red[500];
+  const defaultHoverColor = hoverColor || theme.colors.text.onPrimary;
+  const defaultRing = ring || colorScales.red[500];
+  const defaultHoverRing = hoverRing || colorScales.red[500];
+  const defaultGlow = glow || theme.shadows.dangerGlow;
+
   return (
     <Wrapper
       $size={size}
       $stroke={stroke}
-      $ring={ring}
-      $hoverRing={hoverRing}
-      $glow={glow}
+      $ring={defaultRing}
+      $hoverRing={defaultHoverRing}
+      $glow={defaultGlow}
       whileHover={{ rotate: 90, scale: 1.06 }}
       whileTap={{ scale: 0.94 }}
       onClick={onClick}
@@ -95,15 +105,15 @@ export default function CloseButton({
       >
         <AiOutlineClose
           size={size * 0.5}
-          color={color}
+          color={defaultColor}
           style={{
             transition: "color 0.25s ease",
           }}
           onMouseEnter={(e) => {
-            (e.currentTarget as any).style.color = hoverColor;
+            (e.currentTarget as any).style.color = defaultHoverColor;
           }}
           onMouseLeave={(e) => {
-            (e.currentTarget as any).style.color = color;
+            (e.currentTarget as any).style.color = defaultColor;
           }}
         />
       </motion.span>

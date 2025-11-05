@@ -81,11 +81,6 @@ export default function LightboxMobile({ items, startIndex, onClose }: Props) {
             onClick={onClose}
             size={46}
             stroke={2}
-            color="#ef4444"
-            hoverColor="#fff"
-            ring="#ef4444"
-            hoverRing="#ef4444"
-            glow="rgba(239,68,68,0.45)"
             ariaLabel={t("close")}
           />
         </div>
@@ -136,7 +131,7 @@ export default function LightboxMobile({ items, startIndex, onClose }: Props) {
           <Typography
             variant="body"
             align="center"
-            color="muted"
+            color="tertiary"
             style={{ marginBottom: "0.75rem" }}
           >
             {item.caption}

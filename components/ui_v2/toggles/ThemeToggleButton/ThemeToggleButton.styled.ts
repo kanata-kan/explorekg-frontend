@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { backgroundGradients } from "@/styles/tokens/gradients";
 
 export const IconButton = styled(motion.button)`
   display: flex;
@@ -10,27 +11,22 @@ export const IconButton = styled(motion.button)`
   width: 40px;
   height: 40px;
   border-radius: ${({ theme }) => theme.radii.full};
-  border: 1px solid
-    ${({ theme }) =>
-      theme.isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.08)"};
+  border: 1px solid ${({ theme }) => theme.colors.border.subtle};
   background: ${({ theme }) =>
     theme.isDark
-      ? "linear-gradient(145deg, rgba(30,41,59,0.9), rgba(15,23,42,0.8))"
-      : "linear-gradient(145deg, rgba(255,255,255,0.7), rgba(240,240,240,0.6))"};
+      ? backgroundGradients.dark.surface
+      : backgroundGradients.light.surface};
   backdrop-filter: blur(12px);
-  color: ${({ theme }) =>
-    theme.isDark ? theme.colors.text.primary : theme.colors.text.primary};
+  color: ${({ theme }) => theme.colors.text.primary};
   box-shadow: ${({ theme }) =>
-    theme.isDark
-      ? "0 0 12px rgba(255,255,255,0.1)"
-      : "0 2px 10px rgba(0,0,0,0.08)"};
+    theme.isDark ? theme.shadows.innerSm : theme.shadows.sm};
   cursor: pointer;
   transition: all 0.3s ease;
 
   &:hover {
     transform: scale(1.08);
-    border-color: ${({ theme }) => theme.colors.accent};
-    box-shadow: 0 0 12px ${({ theme }) => theme.colors.accent}50;
+    border-color: ${({ theme }) => theme.colors.primary.main};
+    box-shadow: ${({ theme }) => theme.shadows.primaryGlow};
   }
 
   &:active {

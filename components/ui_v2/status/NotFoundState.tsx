@@ -15,7 +15,7 @@ export function NotFoundState() {
       <Typography as="h1" variant="h3" color="accent">
         Page Not Found
       </Typography>
-      <Typography as="p" variant="body" color="muted">
+      <Typography as="p" variant="body" color="tertiary">
         The page you’re looking for doesn’t exist or has been moved.
       </Typography>
 

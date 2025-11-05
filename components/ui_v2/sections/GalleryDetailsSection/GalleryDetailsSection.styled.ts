@@ -13,14 +13,14 @@ export const GalleryGrid = styled.div`
     aspect-ratio: 1/1;
     border-radius: ${({ theme }) => theme.radii.md};
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: ${({ theme }) => theme.shadows.sm};
     transition:
       transform 0.25s ease,
       box-shadow 0.25s ease;
 
     &:hover {
       transform: scale(1.03);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+      box-shadow: ${({ theme }) => theme.shadows.md};
     }
   }
 `;

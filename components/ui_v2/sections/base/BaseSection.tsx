@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { useTheme } from "styled-components";
 import { UniversalCard } from "../../components";
 import {
   Container,
@@ -13,9 +14,7 @@ import {
 import { mapVariantToSection } from "../../foundation/variantMap";
 import ViewAllButton from "../../foundation/ViewAllButton";
 
-/* -------------------------------------------------------------------------- */
-/* 🧩 TYPES */
-/* -------------------------------------------------------------------------- */
+// Types
 export type DisplayItem = {
   id: string;
   name: string;
@@ -35,25 +34,23 @@ type Props = {
   showCTA?: boolean; // ✅ Optional: explicitly control the CTA visibility
 };
 
-/* -------------------------------------------------------------------------- */
-/* 🧱 BASE SECTION COMPONENT (Production-Ready) */
-/* -------------------------------------------------------------------------- */
+// Base Section Component (Production-Ready)
 export default function BaseSection({
   items,
   namespace,
   ctaBasePath,
   variant = "home",
   specsEnabled = true,
-  showCTA = variant === "home", // 👈 Default behavior (auto for home)
+  showCTA = variant === "home", // Default behavior (auto for home)
 }: Props) {
   const t = useTranslations(namespace);
+  const theme = useTheme();
   const visibleItems = variant === "home" ? items.slice(0, 3) : items;
 
   return (
     <SectionWrapper $variant={mapVariantToSection(variant)}>
       <Container>
-        {/* ------------------------------------------------------------------ */}
-        {/* 🧠 Dynamic Title + Subtitle (Localized with next-intl) */}
+        {/* Dynamic Title + Subtitle (Localized with next-intl) */}
         {/* ------------------------------------------------------------------ */}
         <Typography as="h2" variant="h2" align="center" className="mb-strong">
           {t("title")}
@@ -64,8 +61,8 @@ export default function BaseSection({
             strong: (chunks) => (
               <span
                 style={{
-                  color: "#F97316", // Accent color — consider linking to theme
-                  fontWeight: 600,
+                  color: theme.colors.primary.main,
+                  fontWeight: theme.typography.fontWeights.semiBold,
                 }}
               >
                 {chunks}

@@ -11,7 +11,7 @@ import {
 import { lightTheme, darkTheme } from "@/styles/theme";
 
 type ThemeContextType = {
-  theme: typeof lightTheme;
+  theme: typeof lightTheme | typeof darkTheme;
   isDark: boolean;
   toggleTheme: () => void;
 };

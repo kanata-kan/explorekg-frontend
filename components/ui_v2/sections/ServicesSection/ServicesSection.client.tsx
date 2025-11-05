@@ -42,7 +42,7 @@ export default function ServicesSectionClient({ services }: Props) {
           as="p"
           variant="body"
           align="center"
-          color="muted"
+          color="tertiary"
           style={{
             marginBottom: "2.5rem",
             maxWidth: "680px",

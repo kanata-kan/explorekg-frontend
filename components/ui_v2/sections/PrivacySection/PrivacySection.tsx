@@ -29,7 +29,7 @@ export default function PrivacySection_v2() {
           as="p"
           variant="body"
           align="center"
-          color="muted"
+          color="tertiary"
           style={{ marginTop: "0.5rem" }}
         >
           {t("lastUpdated")} {new Date().toLocaleDateString()}

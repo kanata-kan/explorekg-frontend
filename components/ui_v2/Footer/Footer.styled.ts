@@ -3,20 +3,20 @@
 
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { alpha } from "@/lib/colorUtils/alpha";
 
 /* 🌫️ Footer Wrapper (Glassmorphic Base) */
 export const FooterWrapper = styled(motion.footer)`
   position: relative;
   width: 100%;
-  background: ${({ theme }) =>
-    theme.isDark
-      ? "linear-gradient(180deg, rgba(15,23,42,0.95) 0%, rgba(17,24,39,0.98) 100%)"
-      : "linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(245,246,247,1) 100%)"};
+  background: ${({ theme }) => theme.gradients.hero};
   backdrop-filter: blur(18px) saturate(1.3);
   border-top: 1px solid
     ${({ theme }) =>
-      theme.isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.08)"};
-  box-shadow: 0 -6px 25px rgba(0, 0, 0, 0.08);
+      theme.isDark
+        ? alpha(theme.colors.text.inverse, 0.08)
+        : alpha("#000000", 0.08)};
+  box-shadow: ${({ theme }) => theme.shadows.lg};
   padding: 3rem 2rem;
   overflow: hidden;
 `;
@@ -52,7 +52,7 @@ export const BrandCol = styled.div`
   }
 
   p {
-    color: ${({ theme }) => theme.colors.text.muted};
+    color: ${({ theme }) => theme.colors.text.tertiary};
     font-size: 0.9rem;
     line-height: 1.5;
   }
@@ -74,7 +74,7 @@ export const LinksCol = styled.div`
   }
 
   a {
-    color: ${({ theme }) => theme.colors.text.muted};
+    color: ${({ theme }) => theme.colors.text.tertiary};
     text-decoration: none;
     font-size: 0.9rem;
     transition: all 0.25s ease;
@@ -120,7 +120,9 @@ export const SocialRow = styled.div`
     height: 34px;
     border-radius: 50%;
     background: ${({ theme }) =>
-      theme.isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.05)"};
+      theme.isDark
+        ? alpha(theme.colors.text.inverse, 0.1)
+        : alpha("#000000", 0.05)};
     transition: all 0.25s ease;
 
     img {
@@ -156,7 +158,9 @@ export const NewsletterCol = styled.form`
     border-radius: ${({ theme }) => theme.radii.sm};
     border: 1px solid ${({ theme }) => theme.colors.divider};
     background: ${({ theme }) =>
-      theme.isDark ? "rgba(255,255,255,0.06)" : "rgba(255,255,255,0.9)"};
+      theme.isDark
+        ? alpha(theme.colors.text.inverse, 0.06)
+        : alpha(theme.colors.text.inverse, 0.9)};
     color: ${({ theme }) => theme.colors.text.primary};
     font-size: 0.9rem;
     transition: all 0.25s ease;
@@ -175,24 +179,24 @@ export const NewsletterCol = styled.form`
     border-radius: 6px;
     border: none;
     cursor: pointer;
-    background: ${({ theme }) => theme.colors.primary};
-    color: #fff;
+    background: ${({ theme }) => theme.colors.primary.main};
+    color: ${({ theme }) => theme.colors.text.onPrimary};
     transition: all 0.25s ease;
 
     &:hover {
-      background: ${({ theme }) => theme.colors.primaryHover};
+      background: ${({ theme }) => theme.colors.primary.hover};
       transform: translateY(-2px);
     }
   }
 
   .success {
     font-size: 0.8rem;
-    color: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.success.main};
   }
 
   .error {
     font-size: 0.8rem;
-    color: ${({ theme }) => theme.colors.danger};
+    color: ${({ theme }) => theme.colors.danger.main};
   }
 `;
 
@@ -202,11 +206,13 @@ export const BottomBar = styled.div`
   padding-top: 1.4rem;
   border-top: 1px solid
     ${({ theme }) =>
-      theme.isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.08)"};
+      theme.isDark
+        ? alpha(theme.colors.text.inverse, 0.1)
+        : alpha("#000000", 0.08)};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: ${({ theme }) => theme.colors.text.muted};
+  color: ${({ theme }) => theme.colors.text.tertiary};
   font-size: 0.85rem;
 
   @media (max-width: 750px) {

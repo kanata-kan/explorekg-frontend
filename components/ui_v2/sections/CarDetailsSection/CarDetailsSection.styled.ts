@@ -13,25 +13,25 @@ import {
 /* 🧱 Global Section Wrapper */
 export const Wrapper = styled(WrapperBase)``;
 
-/* 📸 Main Car Image */
+// Main Car Image
 export const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: ${({ theme }) => theme.radii.xl};
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: ${({ theme }) => theme.shadows.md};
   transition: all 0.35s ease;
   cursor: pointer;
 
-  /* 🌗 Hover Effect */
+  // Hover Effect
   &:hover {
-    background-color: ${({ theme }) => darken(theme.colors.surface, 10)};
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    background-color: ${({ theme }) => theme.colors.surface.hover};
+    box-shadow: ${({ theme }) => theme.shadows.lg};
     transform: scale(1.02);
   }
 
-  /* 🖼️ Inner Image transition */
+  // Inner Image transition
   img {
     transition:
       transform 0.35s ease,
@@ -55,13 +55,13 @@ export const SpecsGrid = styled.div`
   margin: ${({ theme }) => theme.spacing.md} 0;
 
   div {
-    background-color: ${({ theme }) => theme.colors.surface};
+    background-color: ${({ theme }) => theme.colors.surface.default};
     border-radius: ${({ theme }) => theme.radii.md};
     text-align: center;
     padding: ${({ theme }) => theme.spacing.xs};
     font-size: 0.8rem;
-    color: ${({ theme }) => theme.colors.text.muted};
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    color: ${({ theme }) => theme.colors.text.tertiary};
+    box-shadow: ${({ theme }) => theme.shadows.xs};
     cursor: default;
     transition: all 0.25s ease;
 
@@ -73,12 +73,12 @@ export const SpecsGrid = styled.div`
     }
 
     &:hover {
-      background-color: ${({ theme }) => darken(theme.colors.surface, 8)};
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-      color: ${({ theme }) => theme.colors.primary};
+      background-color: ${({ theme }) => theme.colors.surface.hover};
+      box-shadow: ${({ theme }) => theme.shadows.sm};
+      color: ${({ theme }) => theme.colors.primary.main};
 
       span {
-        color: ${({ theme }) => theme.colors.accent};
+        color: ${({ theme }) => theme.colors.primary.main};
       }
     }
   }

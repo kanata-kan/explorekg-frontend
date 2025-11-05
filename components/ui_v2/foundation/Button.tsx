@@ -3,10 +3,8 @@
 import styled, { css } from "styled-components";
 import { ReactNode } from "react";
 
-// -------------------------------------------------------------
-// 🧱 Button Component — Kanata UI v2 (Refined Edition)
-// Fully theme-driven, accessible, and fluid
-// -------------------------------------------------------------
+// Button Component - Kanata UI v2
+// Theme-driven, accessible, and responsive
 
 interface ButtonProps {
   children: ReactNode;
@@ -20,20 +18,19 @@ interface ButtonProps {
   style?: React.CSSProperties;
 }
 
-/* ------------------------------------------
-   🧩 Variants (theme aware)
------------------------------------------- */
+// Variants (theme-aware)
 const variantStyles = css<ButtonProps>`
   ${({ theme, variant }) => {
-    const { colors } = theme;
+    const { colors, shadows } = theme;
     switch (variant) {
       case "secondary":
         return `
-          background: ${colors.surfaceAlt};
+          background: ${colors.surface.alt};
           color: ${colors.text.primary};
-          border: 1px solid ${colors.divider};
+          border: 1px solid ${colors.border.default};
           &:hover {
-            background: ${theme.isDark ? "#1E293B" : "#E5E7EB"};
+            background: ${colors.surface.hover};
+            border-color: ${colors.border.strong};
           }
         `;
       case "ghost":
@@ -42,32 +39,30 @@ const variantStyles = css<ButtonProps>`
           color: ${colors.text.primary};
           border: 1px solid transparent;
           &:hover {
-            background: ${theme.isDark ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.03)"};
+            background: ${colors.interactive.hover};
           }
         `;
       case "danger":
         return `
-          background: ${colors.danger};
-          color: ${colors.text.inverse};
+          background: ${colors.danger.main};
+          color: ${colors.text.onDanger};
           &:hover {
-            background: #b91c1c;
+            background: ${colors.danger.hover};
           }
         `;
       default:
         return `
-          background: ${colors.primary};
-          color: ${colors.text.onPrimary || "#fff"};
+          background: ${colors.primary.main};
+          color: ${colors.text.onPrimary};
           &:hover {
-            background: ${colors.primaryHover};
+            background: ${colors.primary.hover};
           }
         `;
     }
   }}
 `;
 
-/* ------------------------------------------
-   ⚙️ Sizes
------------------------------------------- */
+// Sizes
 const sizeStyles = css<ButtonProps>`
   ${({ size, theme }) => {
     switch (size) {
@@ -90,9 +85,7 @@ const sizeStyles = css<ButtonProps>`
   }}
 `;
 
-/* ------------------------------------------
-   🎨 Styled Core
------------------------------------------- */
+// Styled Core
 const StyledButton = styled.button.withConfig({
   shouldForwardProp: (prop) =>
     !["variant", "size", "fullWidth", "disabled"].includes(prop as string),
@@ -111,7 +104,7 @@ const StyledButton = styled.button.withConfig({
   transition: all 0.25s ease;
   position: relative;
   user-select: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: ${({ theme }) => theme.shadows.button};
 
   ${variantStyles}
   ${sizeStyles}
@@ -121,25 +114,23 @@ const StyledButton = styled.button.withConfig({
   }
 
   &:focus-visible {
-    outline: 2px solid ${({ theme }) => theme.colors.accent};
-    outline-offset: 2px;
+    box-shadow: ${({ theme }) => theme.shadows.focus};
+    outline: none;
   }
 
   ${({ disabled, theme }) =>
     disabled &&
     `
-      opacity: 0.6;
+      opacity: ${theme.opacity.disabled};
       cursor: not-allowed;
       pointer-events: none;
-      background: ${theme.colors.divider};
-      color: ${theme.colors.text.muted};
+      background: ${theme.colors.interactive.disabled};
+      color: ${theme.colors.text.disabled};
       box-shadow: none;
     `}
 `;
 
-/* ------------------------------------------
-   🚀 Component Wrapper
------------------------------------------- */
+// Component Wrapper
 export default function Button({
   children,
   as: Tag = "button",

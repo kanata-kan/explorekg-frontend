@@ -4,17 +4,16 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Container, Typography, Button } from "@/components/ui_v2/foundation";
+import { backgroundGradients } from "@/styles/tokens/gradients";
 
-/* -----------------------------------------------------------
-   ✨ Super Pro Styled Components — Responsive + Motion
------------------------------------------------------------ */
+// Super Pro Styled Components — Responsive + Motion
 
 export const Section = styled(motion.section)`
   padding: clamp(4rem, 8vw, 6rem) 0;
   background: ${({ theme }) =>
     theme.isDark
-      ? `linear-gradient(180deg, ${theme.colors.background} 0%, ${theme.colors.backgroundAlt} 100%)`
-      : `linear-gradient(180deg, #fdfdfd 0%, ${theme.colors.sectionAlt} 100%)`};
+      ? backgroundGradients.dark.subtle
+      : backgroundGradients.light.subtle};
   color: ${({ theme }) => theme.colors.text.primary};
   overflow: hidden;
 `;
@@ -146,18 +145,14 @@ export const FormField = styled.div`
   textarea {
     padding: ${({ theme }) => theme.spacing.sm};
     border-radius: ${({ theme }) => theme.radii.sm};
-    border: 1px solid ${({ theme }) => theme.colors.divider};
-    background: ${({ theme }) => theme.colors.surfaceAlt};
+    border: 1px solid ${({ theme }) => theme.colors.border.default};
+    background: ${({ theme }) => theme.colors.surface.alt};
     color: ${({ theme }) => theme.colors.text.primary};
     transition: all 0.25s ease;
 
     &:focus {
-      border-color: ${({ theme }) => theme.colors.brand.main};
-      box-shadow: 0 0 0 4px
-        ${({ theme }) =>
-          theme.isDark
-            ? "rgba(251, 146, 60, 0.2)"
-            : "rgba(16, 185, 129, 0.15)"};
+      border-color: ${({ theme }) => theme.colors.primary.main};
+      box-shadow: ${({ theme }) => theme.shadows.focus};
       outline: none;
     }
   }
@@ -168,25 +163,25 @@ export const SubmitButton = styled(Button)<{ $variant?: string }>`
   width: fit-content;
   background: ${({ theme, $variant }) =>
     $variant === "primary"
-      ? theme.colors.brand.main
+      ? theme.colors.primary.main
       : theme.colors.text.secondary};
-  color: white;
-  font-weight: 600;
-  padding: 0.75rem 1.75rem;
+  color: ${({ theme }) => theme.colors.text.onPrimary};
+  font-weight: ${({ theme }) => theme.typography.fontWeights.semiBold};
+  padding: ${({ theme }) => `${theme.spacing.sm} ${theme.spacing.lg}`};
   border: none;
   border-radius: ${({ theme }) => theme.radii.md};
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: ${({ theme }) => theme.shadows.button};
 
   &:hover {
-    background: ${({ theme }) => theme.colors.brand.hover};
+    background: ${({ theme }) => theme.colors.primary.hover};
     transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    box-shadow: ${({ theme }) => theme.shadows.buttonHover};
   }
 
   &:active {
     transform: translateY(0);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: ${({ theme }) => theme.shadows.xs};
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {

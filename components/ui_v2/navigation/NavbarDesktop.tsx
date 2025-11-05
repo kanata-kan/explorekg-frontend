@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { NavbarWrapper, Brand, NavLinks } from "./Navbar.styled";
+import { Nav, Brand, NavLinks } from "./Navbar.styled";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggleButton from "../toggles/ThemeToggleButton/ThemeToggleButton";
@@ -19,7 +19,7 @@ export default function NavbarDesktop({ scrolled }: { scrolled?: boolean }) {
   const locale = pathname?.split("/")[1] === "fr" ? "fr" : "en";
 
   const [navLinks, setNavLinks] = useState<{ label: string; href: string }[]>(
-    [],
+    []
   );
 
   useEffect(() => {
@@ -29,8 +29,8 @@ export default function NavbarDesktop({ scrolled }: { scrolled?: boolean }) {
   }, [locale]);
 
   return (
-    <NavbarWrapper
-      $scrolled={scrolled}
+    <Nav
+      $scrolled={!!scrolled}
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.4 }}
@@ -55,6 +55,6 @@ export default function NavbarDesktop({ scrolled }: { scrolled?: boolean }) {
         <ThemeToggleButton />
         <LanguageSwitcher />
       </div>
-    </NavbarWrapper>
+    </Nav>
   );
 }

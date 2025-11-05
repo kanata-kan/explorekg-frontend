@@ -17,25 +17,25 @@ const SectionWrapper = styled.section<SectionWrapperProps>`
     switch ($variant) {
       case "alt":
         return css`
-          background-color: ${theme.colors.sectionAlt};
+          background-color: ${theme.colors.background.section};
         `;
       case "hero":
         return css`
           background: linear-gradient(
             -135deg,
-            ${theme.colors.primary} 0%,
-            ${theme.colors.accent} 100%
+            ${theme.colors.primary.main} 0%,
+            ${theme.colors.accent.main} 100%
           );
-          color: ${theme.colors.text.onPrimary || theme.colors.heroText};
+          color: ${theme.colors.text.onPrimary};
         `;
       case "dark":
         return css`
-          background-color: ${theme.colors.backgroundAlt};
+          background-color: ${theme.colors.background.alt};
           color: ${theme.colors.text.primary};
         `;
       default:
         return css`
-          background-color: ${theme.colors.background};
+          background-color: ${theme.colors.background.default};
         `;
     }
   }}

@@ -63,7 +63,7 @@ export default function FooterDesktop() {
             {SITE.NAME}
           </Typography>
 
-          <Typography variant="body" align="left" color="muted">
+          <Typography variant="body" align="left" color="tertiary">
             {SITE.DESCRIPTION}
           </Typography>
 
@@ -86,7 +86,7 @@ export default function FooterDesktop() {
 
             {section.map((link) => (
               <Link key={link.href} href={`/${locale}${link.href}`}>
-                <Typography variant="body" align="left" color="muted">
+                <Typography variant="body" align="left" color="tertiary">
                   {link.label}
                 </Typography>
               </Link>
@@ -126,7 +126,7 @@ export default function FooterDesktop() {
             </Typography>
           )}
           {status === "err" && (
-            <Typography variant="caption" color="error">
+            <Typography variant="caption" color="danger">
               {locale === "fr" ? "Email invalide" : "Invalid email"}
             </Typography>
           )}
@@ -135,10 +135,10 @@ export default function FooterDesktop() {
 
       {/* ⚙️ Bottom Bar */}
       <BottomBar>
-        <Typography variant="caption" align="center" color="muted">
+        <Typography variant="caption" align="center" color="tertiary">
           {SITE.COPYRIGHT}
         </Typography>
-        <Typography variant="caption" align="center" color="muted">
+        <Typography variant="caption" align="center" color="tertiary">
           {locale === "fr"
             ? "Construit avec Next.js + styled-components"
             : "Built with Next.js + styled-components"}

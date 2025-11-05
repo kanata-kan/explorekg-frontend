@@ -16,12 +16,12 @@ const StyledLink = styled(Link)`
   gap: 0.4rem;
   font-size: 1rem;
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.accent};
+  color: ${({ theme }) => theme.colors.accent.main};
   text-decoration: none;
   transition: color 0.25s ease-in-out;
 
   &:hover {
-    color: ${({ theme }) => darken(theme.colors.accent, 10)};
+    color: ${({ theme }) => theme.colors.accent.hover};
   }
 `;
 

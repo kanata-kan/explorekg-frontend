@@ -37,7 +37,7 @@ export default function GalleryItemCard({ item, onOpen }: Props) {
         <Typography variant="h4" color="brand">
           {item.title}
         </Typography>
-        <Typography variant="body" color="muted">
+        <Typography variant="body" color="tertiary">
           {item.caption}
         </Typography>
       </Caption>

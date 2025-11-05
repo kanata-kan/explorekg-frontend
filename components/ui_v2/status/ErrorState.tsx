@@ -20,7 +20,7 @@ export function ErrorState({
       <Typography as="h1" variant="h3" color="accent">
         Something went wrong
       </Typography>
-      <Typography as="p" variant="body" color="muted">
+      <Typography as="p" variant="body" color="tertiary">
         {error.message || "Unexpected error occurred."}
       </Typography>
       <Button onClick={onRetry}>Try Again</Button>

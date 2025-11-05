@@ -4,6 +4,7 @@
 
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import { alpha } from "@/lib/colorUtils/alpha";
 
 // ========================================================
 // 🖥️ DESKTOP LIGHTBOK ELEMENTS
@@ -12,11 +13,7 @@ import styled from "styled-components";
 export const OverlayDesktop = styled(motion.div)`
   position: fixed;
   inset: 0;
-  background: radial-gradient(
-    circle at top left,
-    rgba(20, 20, 20, 0.95),
-    rgba(5, 5, 5, 0.98)
-  );
+  background: ${({ theme }) => theme.gradients.overlayFull};
   backdrop-filter: blur(8px);
   z-index: 1000;
   display: flex;
@@ -34,7 +31,7 @@ export const Wrapper = styled.div`
   max-width: 1400px;
   width: 100%;
   height: 80vh;
-  background: rgba(255, 255, 255, 0.03);
+  background: ${({ theme }) => alpha(theme.colors.text.inverse, 0.03)};
   border-radius: ${({ theme }) => theme.radii.lg};
   overflow: visible; /* ✅ fix hidden button */
 `;
@@ -73,7 +70,7 @@ export const Controls = styled.div`
 export const OverlayMobile = styled(motion.div)`
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.94);
+  background: ${({ theme }) => alpha("#000000", 0.94)};
   backdrop-filter: blur(10px);
   z-index: 1000;
   display: flex;
@@ -87,19 +84,16 @@ export const ImageWrapper = styled(motion.div)`
   width: 100%;
   height: 75vh;
   overflow: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid
+    ${({ theme }) => alpha(theme.colors.text.inverse, 0.1)};
 `;
 
 export const InfoBox = styled.div`
   text-align: center;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.text.inverse};
   width: 100%;
   padding: 1.2rem 1rem 2rem;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.95) 100%
-  );
+  background: ${({ theme }) => theme.gradients.overlayBottom};
 `;
 
 export const ButtonsRow = styled.div`
@@ -118,11 +112,11 @@ export const SwipeHint = styled(motion.div)`
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.5);
+  background: ${({ theme }) => alpha("#000000", 0.5)};
   padding: 0.6rem 1.2rem;
   border-radius: 999px;
   font-size: 0.9rem;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.text.inverse};
   font-weight: 500;
   backdrop-filter: blur(6px);
   letter-spacing: 0.5px;

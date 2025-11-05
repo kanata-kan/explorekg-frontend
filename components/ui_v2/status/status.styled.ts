@@ -8,23 +8,32 @@ export const Wrapper = styled(motion.div)`
   justify-content: center;
   height: 80vh;
   text-align: center;
-  gap: 1.5rem;
+  gap: ${({ theme }) => theme.spacing.lg};
 `;
 
 export const IconWrapper = styled.div`
   font-size: 3rem;
+  opacity: ${({ theme }) => theme.opacity[90]};
 `;
 
 export const Button = styled.button`
-  background: ${({ theme }) => theme.colors.accent};
-  color: white;
+  background: ${({ theme }) => theme.colors.primary.main};
+  color: ${({ theme }) => theme.colors.text.onPrimary};
   border: none;
   border-radius: ${({ theme }) => theme.radii.md};
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
+  padding: ${({ theme }) => `${theme.spacing.md} ${theme.spacing.xl}`};
+  font-weight: ${({ theme }) => theme.typography.fontWeights.semiBold};
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: ${({ theme }) => theme.shadows.button};
+
   &:hover {
-    background: ${({ theme }) => theme.colors.accent};
+    background: ${({ theme }) => theme.colors.primary.hover};
+    box-shadow: ${({ theme }) => theme.shadows.buttonHover};
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
   }
 `;

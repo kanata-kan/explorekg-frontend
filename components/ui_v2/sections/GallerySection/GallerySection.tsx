@@ -30,7 +30,7 @@ export default function GallerySection_v2({ items }: Props) {
           <Typography
             variant="body"
             align="center"
-            color="muted"
+            color="tertiary"
             style={{ maxWidth: 680, margin: "0 auto" }}
           >
             {t.rich("subtitle", {

@@ -2,19 +2,67 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-  /* 🎨 Theme Tokens as CSS Variables */
+  /* Theme Tokens as CSS Variables v2.0 */
   :root {
-    --color-primary: ${({ theme }) => theme.colors.primary};
-    --color-secondary: ${({ theme }) => theme.colors.secondary};
-    --color-accent: ${({ theme }) => theme.colors.accent};
-    --color-background: ${({ theme }) => theme.colors.background};
+    /* Brand Colors */
+    --color-primary: ${({ theme }) => theme.colors.primary.main};
+    --color-primary-hover: ${({ theme }) => theme.colors.primary.hover};
+    --color-primary-light: ${({ theme }) => theme.colors.primary.light};
+    --color-secondary: ${({ theme }) => theme.colors.secondary.main};
+    --color-secondary-hover: ${({ theme }) => theme.colors.secondary.hover};
+    --color-accent: ${({ theme }) => theme.colors.accent.main};
+    --color-accent-hover: ${({ theme }) => theme.colors.accent.hover};
 
+    /* Status Colors */
+    --color-success: ${({ theme }) => theme.colors.success.main};
+    --color-danger: ${({ theme }) => theme.colors.danger.main};
+    --color-warning: ${({ theme }) => theme.colors.warning.main};
+    --color-info: ${({ theme }) => theme.colors.info.main};
+
+    /* Surfaces & Backgrounds */
+    --color-background: ${({ theme }) => theme.colors.background.default};
+    --color-background-alt: ${({ theme }) => theme.colors.background.alt};
+    --color-surface: ${({ theme }) => theme.colors.surface.default};
+    --color-surface-alt: ${({ theme }) => theme.colors.surface.alt};
+    --color-surface-hover: ${({ theme }) => theme.colors.surface.hover};
+
+    /* Text Colors */
     --color-text-primary: ${({ theme }) => theme.colors.text.primary};
     --color-text-secondary: ${({ theme }) => theme.colors.text.secondary};
-    --color-text-muted: ${({ theme }) => theme.colors.text.muted};
+    --color-text-tertiary: ${({ theme }) => theme.colors.text.tertiary};
+    --color-text-muted: ${({ theme }) => theme.colors.text.tertiary};
     --color-text-inverse: ${({ theme }) => theme.colors.text.inverse};
+    --color-text-on-primary: ${({ theme }) => theme.colors.text.onPrimary};
+    --color-text-brand: ${({ theme }) => theme.colors.text.brand};
+    --color-text-accent: ${({ theme }) => theme.colors.text.accent};
 
-    /* Typography tokens from theme */
+    /* Borders & Dividers */
+    --color-border: ${({ theme }) => theme.colors.border.default};
+    --color-border-strong: ${({ theme }) => theme.colors.border.strong};
+    --color-divider: ${({ theme }) => theme.colors.divider};
+
+    /* Interactive States */
+    --color-hover: ${({ theme }) => theme.colors.interactive.hover};
+    --color-active: ${({ theme }) => theme.colors.interactive.active};
+    --color-focus: ${({ theme }) => theme.colors.interactive.focus};
+
+    /* Shadows */
+    --shadow-xs: ${({ theme }) => theme.shadows.xs};
+    --shadow-sm: ${({ theme }) => theme.shadows.sm};
+    --shadow-md: ${({ theme }) => theme.shadows.md};
+    --shadow-lg: ${({ theme }) => theme.shadows.lg};
+    --shadow-xl: ${({ theme }) => theme.shadows.xl};
+    --shadow-card: ${({ theme }) => theme.shadows.card};
+    --shadow-card-hover: ${({ theme }) => theme.shadows.cardHover};
+    --shadow-button: ${({ theme }) => theme.shadows.button};
+    --shadow-focus: ${({ theme }) => theme.shadows.focus};
+
+    /* Gradients */
+    --gradient-primary: ${({ theme }) => theme.gradients.primaryToAccent};
+    --gradient-hero: ${({ theme }) => theme.gradients.hero};
+    --gradient-surface: ${({ theme }) => theme.gradients.surface};
+
+    /* Typography tokens */
     --font-base: ${({ theme }) => theme.typography.fontFamily.base};
     --font-heading: ${({ theme }) => theme.typography.fontFamily.heading};
 
@@ -28,10 +76,16 @@ export const GlobalStyle = createGlobalStyle`
     --line-height-normal: ${({ theme }) => theme.typography.lineHeights.normal};
     --line-height-relaxed: ${({ theme }) => theme.typography.lineHeights.relaxed};
 
-    /* Spacing tokens from theme */
+    /* Spacing tokens */
     --spacing-xs: ${({ theme }) => theme.spacing.xs};
     --spacing-sm: ${({ theme }) => theme.spacing.sm};
+    --spacing-md: ${({ theme }) => theme.spacing.md};
+    --spacing-lg: ${({ theme }) => theme.spacing.lg};
+    --spacing-xl: ${({ theme }) => theme.spacing.xl};
+
+    /* Layout tokens */
     --container-max-lg: ${({ theme }) => theme.layout.container.maxWidth.lg};
+    --container-max-xl: ${({ theme }) => theme.layout.container.maxWidth.xl};
     --section-spacing-default-md: ${({ theme }) => theme.layout.section.spacing.default.md};
   }
 

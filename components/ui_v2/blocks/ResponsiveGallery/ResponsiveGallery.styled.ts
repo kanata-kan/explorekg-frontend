@@ -1,13 +1,14 @@
 // components/ui_v2/blocks/ResponsiveGallery/ResponsiveGallery.styled.ts
 import styled from "styled-components";
+import { alpha } from "@/lib/colorUtils/alpha";
 
 export const GalleryContainer = styled.section`
   position: relative;
   width: 100%;
   overflow: hidden;
   border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  background: ${({ theme }) => theme.colors.surface || "#111"};
+  box-shadow: ${({ theme }) => theme.shadows.lg};
+  background: ${({ theme }) => theme.colors.surface.default};
 `;
 
 export const Frame = styled.div`
@@ -29,7 +30,7 @@ export const ZoomOverlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: ${({ theme }) => theme.colors.overlay.medium};
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -53,7 +54,7 @@ export const NavButton = styled.button<{ $disabled?: boolean }>`
   height: 48px;
   border: none;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
+  background: ${({ theme }) => alpha(theme.colors.text.inverse, 0.08)};
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
@@ -62,7 +63,7 @@ export const NavButton = styled.button<{ $disabled?: boolean }>`
   transition: all 0.25s ease;
 
   &:hover:not(:disabled) {
-    background: rgba(255, 255, 255, 0.2);
+    background: ${({ theme }) => alpha(theme.colors.text.inverse, 0.2)};
     transform: translateY(-50%) scale(1.1);
   }
 
@@ -93,12 +94,12 @@ export const Dots = styled.div`
     height: 10px;
     border-radius: 50%;
     border: none;
-    background: rgba(255, 255, 255, 0.3);
+    background: ${({ theme }) => alpha(theme.colors.text.inverse, 0.3)};
     cursor: pointer;
     transition: all 0.25s ease;
 
     &.active {
-      background: ${({ theme }) => theme.colors.accent || "#0af"};
+      background: ${({ theme }) => theme.colors.accent.main};
       transform: scale(1.4);
     }
   }
@@ -110,8 +111,8 @@ export const LoadingOverlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.4);
-  color: white;
+  background: ${({ theme }) => theme.colors.overlay.light};
+  color: ${({ theme }) => theme.colors.text.inverse};
   font-size: 14px;
   z-index: 5;
 `;
@@ -122,7 +123,7 @@ export const EmptyState = styled.div`
   justify-content: center;
   height: 300px;
   border-radius: 12px;
-  color: #888;
-  background: #f4f4f4;
+  color: ${({ theme }) => theme.colors.text.tertiary};
+  background: ${({ theme }) => theme.colors.background.alt};
   font-size: 15px;
 `;

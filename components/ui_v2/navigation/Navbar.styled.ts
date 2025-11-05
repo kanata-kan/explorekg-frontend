@@ -1,22 +1,18 @@
 // components/ui_v2/navigation/Navbar.styled.ts
 "use client";
 
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { motion } from "framer-motion";
+import { Container } from "@/components/ui_v2/foundation";
+import { backgroundGradients } from "@/styles/tokens/gradients";
+import { alpha } from "@/lib/colorUtils/alpha";
 
-/* =========================================================
- 🧭 Navbar Styled Components
- -----------------------------------------------------------
- This file defines all styled-components used by both
- - NavbarDesktop 🖥️
- - NavbarResponsive 📱
+// Navbar Styled Components
+// This file defines all styled-components used by both NavbarDesktop and NavbarResponsive
+// It uses styled-components with framer-motion for animation support
 
- It uses `styled-components` with `framer-motion` for
- animation support. Each section is modular and reusable.
-========================================================= */
-
-/* ===== 💎 Root Navbar Bar ===== */
-export const NavbarWrapper = styled(motion.nav)<{ $scrolled?: boolean }>`
+// Main navbar container
+export const Nav = styled(motion.nav)<{ $scrolled: boolean }>`
   position: fixed;
   top: 0;
   width: 100%;
@@ -27,31 +23,27 @@ export const NavbarWrapper = styled(motion.nav)<{ $scrolled?: boolean }>`
   padding: ${({ theme }) => `${theme.spacing.sm} ${theme.spacing.lg}`};
   transition: all 0.4s ease;
 
-  /* 🌫️ Dynamic glass-like background based on scroll + theme */
+  // Dynamic glass-like background based on scroll + theme
   background: ${({ theme, $scrolled }) =>
     $scrolled
       ? theme.isDark
-        ? "rgba(15, 23, 42, 0.95)" // after scroll (dark)
-        : "rgba(255, 255, 255, 0.9)" // after scroll (light)
+        ? alpha(theme.colors.background.default, 0.95)
+        : alpha(theme.colors.surface.default, 0.9)
       : theme.isDark
-        ? "rgba(15, 23, 42, 0.3)" // initial glass (dark)
-        : "rgba(255, 255, 255, 0.4)"}; // initial glass (light)
+        ? alpha(theme.colors.background.default, 0.3)
+        : alpha(theme.colors.surface.default, 0.4)};
 
   backdrop-filter: blur(${({ $scrolled }) => ($scrolled ? "10px" : "20px")})
     saturate(1.3);
 
-  /* 🩶 Shadow depth changes dynamically on scroll */
-  box-shadow: ${({ $scrolled }) =>
-    $scrolled
-      ? "0 8px 25px rgba(0, 0, 0, 0.25)"
-      : "0 4px 15px rgba(0, 0, 0, 0.05)"};
+  // Shadow depth changes dynamically on scroll
+  box-shadow: ${({ theme, $scrolled }) =>
+    $scrolled ? theme.shadows.lg : theme.shadows.xs};
 
-  /* 🧱 Subtle bottom border */
+  // Subtle bottom border
   border-bottom: ${({ theme, $scrolled }) =>
     $scrolled
-      ? theme.isDark
-        ? "1px solid rgba(255,255,255,0.08)"
-        : "1px solid rgba(0,0,0,0.08)"
+      ? `1px solid ${theme.colors.border.subtle}`
       : "1px solid transparent"};
 `;
 
@@ -60,16 +52,16 @@ export const Brand = styled.div`
   display: flex;
   flex-direction: column;
   line-height: 1.1;
-  font-weight: 700;
-  color: ${({ theme }) => theme.colors.primary};
+  font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
+  color: ${({ theme }) => theme.colors.primary.main};
 
   span:last-child {
     font-size: 0.8rem;
-    color: ${({ theme }) => theme.colors.text.muted};
+    color: ${({ theme }) => theme.colors.text.tertiary};
   }
 `;
 
-/* ===== 🔗 Navigation Links (desktop only) ===== */
+// Navigation Links (desktop only)
 export const NavLinks = styled.div`
   display: flex;
   align-items: center;
@@ -135,29 +127,29 @@ export const Drawer = styled(motion.div)`
   flex-direction: column;
   justify-content: space-between;
 
-  /* 🎨 Smooth gradient + glass effect */
+  // Smooth gradient + glass effect
   background: ${({ theme }) =>
     theme.isDark
-      ? "linear-gradient(180deg, rgba(17,24,39,0.96) 0%, rgba(15,23,42,0.98) 100%)"
-      : "linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(245,245,245,1) 100%)"};
+      ? backgroundGradients.dark.surface
+      : backgroundGradients.light.surface};
 
   backdrop-filter: blur(18px) saturate(1.4);
-  box-shadow: -6px 0 30px rgba(0, 0, 0, 0.25);
+  box-shadow: ${({ theme }) => theme.shadows.modal};
   z-index: 10000;
   overflow-y: auto;
 
-  border-left: 1px solid
-    ${({ theme }) =>
-      theme.isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.08)"};
+  border-left: 1px solid ${({ theme }) => theme.colors.border.subtle};
 `;
 
-/* ===== 🧭 Drawer Header ===== */
+// Drawer Header
 export const DrawerHeader = styled.div`
-  padding: 1.8rem 1.5rem 1rem;
+  padding: ${({ theme }) =>
+    `${theme.spacing.lg} ${theme.spacing.md} ${theme.spacing.sm}`};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid
+    ${({ theme }) => alpha(theme.colors.text.inverse, 0.1)};
 
   .header-content {
     border-left: 3px solid ${({ theme }) => theme.colors.primary};
@@ -167,15 +159,15 @@ export const DrawerHeader = styled.div`
   h2 {
     font-size: 1.1rem;
     font-weight: 700;
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary.main};
   }
 
   span {
     font-size: 0.85rem;
-    color: ${({ theme }) => theme.colors.text.muted};
+    color: ${({ theme }) => theme.colors.text.tertiary};
   }
 
-  /* ❌ Close Button */
+  // Close Button
   .close-btn {
     background: transparent;
     border: none;
@@ -197,7 +189,8 @@ export const DrawerLinks = styled.div`
   flex-direction: column;
   padding: 2.5rem 2rem;
   gap: 1.4rem;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  border-bottom: 1px dashed
+    ${({ theme }) => alpha(theme.colors.text.inverse, 0.1)};
 
   a {
     font-size: 1.25rem;
@@ -206,14 +199,14 @@ export const DrawerLinks = styled.div`
     text-decoration: none;
     transition: all 0.25s ease;
     position: relative;
-    padding-left: 0.6rem;
+    padding-left: ${({ theme }) => theme.spacing.sm};
 
     &:hover {
-      color: ${({ theme }) => theme.colors.accent};
+      color: ${({ theme }) => theme.colors.primary.main};
       transform: translateX(6px);
     }
 
-    /* 🔘 Small dot indicator */
+    // Small dot indicator
     &:before {
       content: "";
       position: absolute;
@@ -222,8 +215,8 @@ export const DrawerLinks = styled.div`
       transform: translateY(-50%);
       width: 4px;
       height: 4px;
-      border-radius: 50%;
-      background: ${({ theme }) => theme.colors.accent};
+      border-radius: ${({ theme }) => theme.radii.full};
+      background: ${({ theme }) => theme.colors.primary.main};
       opacity: 0;
       transition: opacity 0.3s ease;
     }
@@ -237,7 +230,7 @@ export const DrawerLinks = styled.div`
 /* ===== ⚙️ Drawer Footer ===== */
 export const DrawerFooter = styled.div`
   padding: 1.5rem 1.2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid ${({ theme }) => alpha(theme.colors.text.inverse, 0.1)};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -251,17 +244,17 @@ export const DrawerFooter = styled.div`
     padding: 0.6rem 1.2rem;
     border-radius: 999px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid ${({ theme }) => alpha(theme.colors.text.inverse, 0.15)};
+    box-shadow: ${({ theme }) => theme.shadows.sm};
   }
 
   p {
     font-size: 0.85rem;
-    color: ${({ theme }) => theme.colors.text.muted};
+    color: ${({ theme }) => theme.colors.text.tertiary};
   }
 `;
 
-/* ===== 🌫️ Overlay Behind Drawer ===== */
+// Overlay Behind Drawer
 export const Overlay = styled(motion.div)`
   position: fixed;
   top: 0;
@@ -269,7 +262,7 @@ export const Overlay = styled(motion.div)`
   width: 100vw;
   height: 100vh;
   background: ${({ theme }) =>
-    theme.isDark ? "rgba(0,0,0,0.7)" : "rgba(0,0,0,0.5)"};
+    theme.isDark ? alpha("#000000", 0.7) : alpha("#000000", 0.5)};
   z-index: 9000;
   backdrop-filter: blur(4px);
 `;

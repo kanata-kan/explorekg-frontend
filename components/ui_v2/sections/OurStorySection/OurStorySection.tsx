@@ -3,8 +3,10 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { useTheme } from "styled-components";
 import { Button } from "@/components/ui_v2/foundation";
 import { SectionWrapperImage } from "@/components/ui_v2/foundation/SectionWrapperImage.styled";
+import { overlayGradients } from "@/styles/tokens/gradients";
 import {
   ClosingText,
   CTAWrapper,
@@ -28,12 +30,13 @@ export default function OurStorySection({
   locale: string;
 }) {
   const t = useTranslations("ourStory");
+  const theme = useTheme();
 
   return (
     <SectionWrapperImage
       $variant="tight"
       $bgImage="/images/our-story/our-story-bg.webp"
-      $overlay="linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.9) 100%)"
+      $overlay={overlayGradients.full}
       style={{
         backdropFilter: "blur(3px)",
         backgroundAttachment: "fixed",
@@ -104,7 +107,7 @@ export default function OurStorySection({
             viewport={{ once: true }}
             whileHover={{
               scale: 1.05,
-              boxShadow: "0 0 25px rgba(255,125,45,0.5)",
+              boxShadow: theme.shadows.primaryGlow,
             }}
             transition={{ type: "spring", stiffness: 280, damping: 16 }}
           >

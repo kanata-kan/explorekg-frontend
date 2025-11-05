@@ -47,10 +47,8 @@ export const SectionWrapperImage = styled.section<Props>`
     content: "";
     position: absolute;
     inset: 0;
-    background: ${({ $overlay }) =>
-      $overlay
-        ? $overlay
-        : `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.8))`};
+    background: ${({ $overlay, theme }) =>
+      $overlay ? $overlay : theme.gradients.overlayBottom};
     z-index: 1;
   }
 

@@ -3,6 +3,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { alpha } from "@/lib/colorUtils/alpha";
 
 /* ------------------------------------------------
    ✨ Animations
@@ -68,16 +69,17 @@ const NavButton = styled.button.withConfig({
   cursor: pointer;
   z-index: 50;
 
-  background: rgba(255, 255, 255, 0.25);
+  background: ${({ theme }) =>
+    theme.isDark ? alpha("#FFFFFF", 0.25) : alpha("#FFFFFF", 0.9)};
   backdrop-filter: blur(8px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: ${({ theme }) => theme.shadows.sm};
   color: ${({ theme }) => theme.colors.text.primary};
   transition: all 0.3s ease;
 
   &:hover {
-    background: ${({ theme }) => theme.colors.accent};
+    background: ${({ theme }) => theme.colors.accent.main};
     color: ${({ theme }) => theme.colors.text.onPrimary};
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    box-shadow: ${({ theme }) => theme.shadows.cardHover};
   }
 
   svg {

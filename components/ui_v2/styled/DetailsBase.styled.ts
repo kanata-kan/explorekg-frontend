@@ -31,7 +31,7 @@ export const BackLinkBase = styled.div`
   margin-top: ${({ theme }) => theme.spacing.md};
 
   a {
-    color: ${({ theme }) => theme.colors.text.muted};
+    color: ${({ theme }) => theme.colors.text.tertiary};
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -39,7 +39,7 @@ export const BackLinkBase = styled.div`
     transition: color 0.3s ease;
 
     &:hover {
-      color: ${({ theme }) => theme.colors.primary};
+      color: ${({ theme }) => theme.colors.primary.main};
     }
   }
 `;

@@ -30,12 +30,12 @@ const Card = styled.div`
 
 const IconWrapper = styled.div`
   font-size: 2rem;
-  color: ${({ theme }) => theme.colors.accent};
+  color: ${({ theme }) => theme.colors.accent.main};
   margin-bottom: 1rem;
   transition: color 0.3s ease;
 
   ${Card}:hover & {
-    color: ${({ theme }) => darken(theme.colors.accent, 10)};
+    color: ${({ theme }) => theme.colors.accent.hover};
   }
 `;
 
@@ -80,7 +80,7 @@ export default function ServiceCard({ service }: Props) {
         as="p"
         variant="body"
         align="center"
-        color="muted"
+        color="tertiary"
         style={{
           fontSize: "0.9rem",
           lineHeight: 1.5,

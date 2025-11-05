@@ -74,7 +74,7 @@ export default function FooterResponsive() {
           <Typography
             variant="body"
             align="center"
-            color="muted"
+            color="tertiary"
             style={{
               marginTop: "0.4rem",
               maxWidth: "280px",
@@ -130,7 +130,7 @@ export default function FooterResponsive() {
                     marginBottom: "0.2rem",
                   }}
                 >
-                  <Typography variant="body" align="center" color="muted">
+                  <Typography variant="body" align="center" color="tertiary">
                     {link.label}
                   </Typography>
                 </Link>
@@ -191,7 +191,7 @@ export default function FooterResponsive() {
             <Typography
               variant="caption"
               align="center"
-              color="error"
+              color="danger"
               style={{ marginTop: "0.4rem" }}
             >
               {locale === "fr" ? "Email invalide" : "Invalid email"}
@@ -201,10 +201,10 @@ export default function FooterResponsive() {
 
         {/* ⚙️ Bottom Bar */}
         <BottomBar style={{ flexDirection: "column", gap: "0.3rem" }}>
-          <Typography variant="caption" align="center" color="muted">
+          <Typography variant="caption" align="center" color="tertiary">
             {SITE.COPYRIGHT}
           </Typography>
-          <Typography variant="caption" align="center" color="muted">
+          <Typography variant="caption" align="center" color="tertiary">
             {locale === "fr"
               ? "Construit avec Next.js + styled-components"
               : "Built with Next.js + styled-components"}

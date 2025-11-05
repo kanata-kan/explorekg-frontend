@@ -77,7 +77,7 @@ export default function LightboxDesktop({ items, startIndex, onClose }: Props) {
             <Typography variant="h3" color="brand">
               {item.title}
             </Typography>
-            <Typography variant="body" color="muted">
+            <Typography variant="body" color="tertiary">
               {item.caption}
             </Typography>
 

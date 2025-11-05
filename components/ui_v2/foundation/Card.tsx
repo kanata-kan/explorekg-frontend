@@ -25,27 +25,27 @@ const StyledCard = styled.div.withConfig({
   flex-direction: column;
   justify-content: flex-start;
 
-  /* 🔲 التصميم الأساسي */
+  // Basic design
   width: 100%;
   background: ${({ theme, variant }) =>
     variant === "surface"
-      ? theme.colors.surfaceAlt
+      ? theme.colors.surface.alt
       : variant === "outline"
         ? "transparent"
-        : theme.colors.surface};
+        : theme.colors.surface.default};
   border-radius: ${({ theme }) => theme.radii.lg};
   padding: ${({ theme }) => theme.spacing.lg};
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
 
-  /* 🩶 الظلال أو الحدود حسب الـ variant */
+  // Shadows or borders based on variant
   box-shadow: ${({ theme, variant }) =>
     variant === "outline"
-      ? `0 0 0 1px ${theme.colors.divider}`
-      : `0 2px 8px rgba(0,0,0,0.05)`};
+      ? `0 0 0 1px ${theme.colors.border.default}`
+      : theme.shadows.xs};
 
-  /* ✨ التفاعل (Hover + Focus) */
+  // Interaction (Hover + Focus)
   transition: all 0.25s ease;
   ${({ interactive, theme }) =>
     interactive &&
@@ -53,26 +53,24 @@ const StyledCard = styled.div.withConfig({
       cursor: pointer;
       &:hover {
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        box-shadow: ${theme.shadows.sm};
       }
       &:focus-visible {
-        outline: 2px solid ${theme.colors.primary};
+        outline: 2px solid ${theme.colors.primary.main};
         outline-offset: 2px;
       }
     `}
 
-  /* 🧠 تكيف مع الوضع الليلي */
+  // Dark mode adaptation
   @media (prefers-color-scheme: dark) {
     box-shadow: ${({ theme, variant }) =>
       variant === "outline"
-        ? `0 0 0 1px ${theme.colors.divider}`
-        : `0 2px 8px rgba(0,0,0,0.3)`};
+        ? `0 0 0 1px ${theme.colors.border.default}`
+        : theme.shadows.sm};
   }
 `;
 
-/* --------------------------------------------
-   ⚙️ React Component
--------------------------------------------- */
+// React Component
 export default function Card({
   as: Tag = "div",
   children,

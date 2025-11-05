@@ -2,7 +2,9 @@
 
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
+import { colorScales } from "@/styles/tokens/colorScales";
+import { alpha } from "@/lib/colorUtils/alpha";
 
 const GlassWrapper = styled.div`
   position: fixed;
@@ -13,7 +15,8 @@ const GlassWrapper = styled.div`
   z-index: 9999;
   backdrop-filter: blur(14px) saturate(180%);
   -webkit-backdrop-filter: blur(14px) saturate(180%);
-  background: rgba(255, 255, 255, 0.07);
+  background: ${({ theme }) =>
+    theme.isDark ? alpha("#000000", 0.7) : alpha("#FFFFFF", 0.7)};
 `;
 
 const SpinnerContainer = styled.div`
@@ -23,8 +26,9 @@ const SpinnerContainer = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 0 25px rgba(255, 125, 45, 0.25);
+  background: ${({ theme }) =>
+    theme.isDark ? alpha("#FFFFFF", 0.1) : alpha("#FFFFFF", 0.05)};
+  box-shadow: ${({ theme }) => theme.shadows.primaryGlow};
   position: relative;
   overflow: visible;
 `;
@@ -38,27 +42,18 @@ const SvgPath = styled(motion.svg)`
 const BrandName = styled(motion.h2)`
   position: absolute;
   bottom: -50px;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: ${({ theme }) => theme.typography.fontSizes.body};
+  font-weight: ${({ theme }) => theme.typography.fontWeights.semiBold};
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-
-  /* 🟢 Gradient refresh with accent theme */
-  background: linear-gradient(
-    90deg,
-    #10b981 0%,
-    /* accent emerald green */ #34d399 50%,
-    /* minty light green */ #a7f3d0 100% /* pale fresh end */
-  );
-
+  font-family: ${({ theme }) => theme.typography.fontFamily.heading};
+  background: ${({ theme }) => theme.gradients.accentBright};
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-
   text-align: center;
-  filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.2)); /* subtle glow */
+  filter: ${({ theme }) => theme.shadows.accentGlow};
 `;
 
 const mountainPath = "M20 80 Q50 30 80 80 Q65 60 50 80 Q35 60 20 80";
@@ -102,9 +97,9 @@ export function NomadiaGlassSpinner() {
           />
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#ff7d2d" />
-              <stop offset="50%" stopColor="#fcb045" />
-              <stop offset="100%" stopColor="#ffd580" />
+              <stop offset="0%" stopColor={colorScales.orange[500]} />
+              <stop offset="50%" stopColor={colorScales.orange[400]} />
+              <stop offset="100%" stopColor={colorScales.orange[300]} />
             </linearGradient>
           </defs>
         </SvgPath>

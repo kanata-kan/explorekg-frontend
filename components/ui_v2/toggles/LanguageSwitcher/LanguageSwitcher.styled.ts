@@ -7,10 +7,10 @@ export const Wrapper = styled.div`
   display: flex;
   border-radius: ${({ theme }) => theme.radii.full};
   background: ${({ theme }) =>
-    theme.isDark ? theme.colors.surface : theme.colors.backgroundAlt};
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    theme.isDark ? theme.colors.surface.default : theme.colors.background.alt};
+  box-shadow: ${({ theme }) => theme.shadows.sm};
   overflow: hidden;
-  border: 1px solid ${({ theme }) => theme.colors.accent};
+  border: 1px solid ${({ theme }) => theme.colors.primary.main};
 `;
 
 export const LangButton = styled(motion.button)<{ $active?: boolean }>`
@@ -18,10 +18,13 @@ export const LangButton = styled(motion.button)<{ $active?: boolean }>`
   padding: ${({ theme }) => `${theme.spacing.xs} ${theme.spacing.md}`};
   background: transparent;
   color: ${({ $active, theme }) =>
-    $active ? theme.colors.accent : theme.colors.text.primary};
+    $active ? theme.colors.primary.main : theme.colors.text.primary};
   border: none;
   cursor: pointer;
-  font-weight: ${({ $active }) => ($active ? 700 : 500)};
+  font-weight: ${({ $active, theme }) =>
+    $active
+      ? theme.typography.fontWeights.bold
+      : theme.typography.fontWeights.medium};
   font-size: 0.85rem;
   letter-spacing: 0.5px;
   transition: all 0.25s ease;

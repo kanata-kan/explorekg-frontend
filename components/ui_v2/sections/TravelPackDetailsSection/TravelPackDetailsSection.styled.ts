@@ -13,33 +13,33 @@ import {
 /* 🧱 Wrapper */
 export const Wrapper = styled(WrapperBase)``;
 
-/* 🖼️ Hero Image */
+// Hero Image
 export const HeroImageWrapper = styled.div`
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: ${({ theme }) => theme.radii.xl};
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: ${({ theme }) => theme.shadows.md};
 `;
 
-/* 📄 Info Section */
+// Info Section
 export const InfoSection = styled(InfoSectionBase)``;
 
-/* 🌿 Features */
+// Features
 export const FeaturesList = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0 0 ${({ theme }) => theme.spacing.md} 0;
 
   li {
-    background-color: ${({ theme }) => theme.colors.surface};
+    background-color: ${({ theme }) => theme.colors.surface.default};
     border-radius: ${({ theme }) => theme.radii.md};
     padding: ${({ theme }) => theme.spacing.sm};
     margin-bottom: ${({ theme }) => theme.spacing.xs};
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    box-shadow: ${({ theme }) => theme.shadows.xs};
     font-size: 0.9rem;
-    color: ${({ theme }) => theme.colors.text.muted};
+    color: ${({ theme }) => theme.colors.text.tertiary};
     transition: all 0.25s ease;
     display: flex;
     align-items: center;
@@ -47,39 +47,38 @@ export const FeaturesList = styled.ul`
     cursor: default;
 
     .checkmark {
-      color: ${({ theme }) => theme.colors.accent};
-      font-weight: bold;
+      color: ${({ theme }) => theme.colors.primary.main};
+      font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
       font-size: 1.1rem;
-      margin-right: 0.4rem;
+      margin-right: ${({ theme }) => theme.spacing.xs};
     }
 
     &:hover {
-      background-color: ${({ theme }) =>
-        theme.colors.surfaceAlt || theme.colors.surface};
-      color: ${({ theme }) => theme.colors.primary};
+      background-color: ${({ theme }) => theme.colors.surface.hover};
+      color: ${({ theme }) => theme.colors.primary.main};
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      box-shadow: ${({ theme }) => theme.shadows.sm};
     }
 
     &:hover .checkmark {
-      color: ${({ theme }) => theme.colors.primary};
+      color: ${({ theme }) => theme.colors.primary.main};
     }
   }
 `;
 
-/* 📦 Details Card */
+// Details Card
 export const DetailsCard = styled.div`
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  background-color: ${({ theme }) => theme.colors.surface};
+  gap: ${({ theme }) => theme.spacing.sm};
+  background-color: ${({ theme }) => theme.colors.surface.default};
   padding: ${({ theme }) => theme.spacing.sm};
   border-radius: ${({ theme }) => theme.radii.md};
   margin-bottom: ${({ theme }) => theme.spacing.xs};
-  color: ${({ theme }) => theme.colors.text.muted};
+  color: ${({ theme }) => theme.colors.text.tertiary};
 
   svg {
-    color: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.primary.main};
   }
 `;
 

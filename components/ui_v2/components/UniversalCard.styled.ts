@@ -12,10 +12,10 @@ export const CardWrapper = styled.div`
   padding: ${({ theme }) => theme.spacing.lg};
   background: ${({ theme }) =>
     theme.isDark
-      ? darken(theme.colors.surface, -3)
-      : darken(theme.colors.surface, 3)};
-  border: 1px solid ${({ theme }) => darken(theme.colors.surface, 8)};
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      ? darken(theme.colors.surface.default, -3)
+      : darken(theme.colors.surface.default, 3)};
+  border: 1px solid ${({ theme }) => darken(theme.colors.surface.default, 8)};
+  box-shadow: ${({ theme }) => theme.shadows.card};
   transition: all 0.3s ease;
   width: 100%;
   max-width: 360px;
@@ -24,11 +24,11 @@ export const CardWrapper = styled.div`
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: ${({ theme }) => theme.shadows.cardHover};
     background: ${({ theme }) =>
       theme.isDark
-        ? darken(theme.colors.surface, 5)
-        : darken(theme.colors.surface, -2)};
+        ? darken(theme.colors.surface.default, 5)
+        : darken(theme.colors.surface.default, -2)};
   }
 
   .card-content {
@@ -75,15 +75,15 @@ export const PriceTag = styled.div`
   gap: 6px;
   background: ${({ theme }) =>
     theme.isDark
-      ? `linear-gradient(135deg, ${theme.colors.accent} 0%, ${darken(theme.colors.accent, 20)} 100%)`
-      : `linear-gradient(135deg, ${darken(theme.colors.accent, -10)} 0%, ${theme.colors.primary} 100%)`};
+      ? `linear-gradient(135deg, ${theme.colors.accent.main} 0%, ${darken(theme.colors.accent.main, 20)} 100%)`
+      : `linear-gradient(135deg, ${darken(theme.colors.accent.main, -10)} 0%, ${theme.colors.primary.main} 100%)`};
   color: ${({ theme }) => theme.colors.text.onPrimary};
   padding: 0.35rem 0.7rem;
   border-radius: ${({ theme }) => theme.radii.full};
   font-weight: 600;
   font-size: 0.9rem;
   margin: 0.75rem auto 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: ${({ theme }) => theme.shadows.md};
   width: fit-content;
   transition:
     transform 0.25s ease,
@@ -95,7 +95,7 @@ export const PriceTag = styled.div`
 
   ${CardWrapper}:hover & {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    box-shadow: ${({ theme }) => theme.shadows.lg};
   }
 `;
 
@@ -115,7 +115,7 @@ export const SpecsGrid = styled.div`
   }
 
   svg {
-    color: ${({ theme }) => darken(theme.colors.primary, -10)};
+    color: ${({ theme }) => theme.colors.primary.light};
     font-size: 1rem;
     transition: color 0.3s ease;
   }
@@ -123,11 +123,11 @@ export const SpecsGrid = styled.div`
   span {
     display: block;
     font-size: 0.75rem;
-    color: ${({ theme }) => theme.colors.text.muted};
+    color: ${({ theme }) => theme.colors.text.tertiary};
     margin-top: 3px;
   }
 
   ${CardWrapper}:hover & svg {
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary.main};
   }
 `;

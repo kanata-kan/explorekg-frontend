@@ -1,0 +1,226 @@
+{
+  "Color System - Semantic Color": {
+    "prefix": "themeColor",
+    "body": [
+      "\\${({ theme }) => theme.colors.${1|primary,secondary,accent,success,danger,warning,info|}.${2|main,hover,active,light,lighter,dark|}}"
+    ],
+    "description": "Insert semantic color from theme"
+  },
+
+  "Color System - Text Color": {
+    "prefix": "themeText",
+    "body": [
+      "\\${({ theme }) => theme.colors.text.${1|primary,secondary,tertiary,muted,disabled,inverse,onPrimary,onAccent,onDanger,link,linkHover,brand,accent,success,danger|}}"
+    ],
+    "description": "Insert text color from theme"
+  },
+
+  "Color System - Background": {
+    "prefix": "themeBg",
+    "body": [
+      "\\${({ theme }) => theme.colors.${1|background,surface|}.${2|default,paper,elevated,alt,section|}}"
+    ],
+    "description": "Insert background color from theme"
+  },
+
+  "Color System - Border": {
+    "prefix": "themeBorder",
+    "body": [
+      "\\${({ theme }) => theme.colors.border.${1|default,strong,subtle,hover,focus,divider|}}"
+    ],
+    "description": "Insert border color from theme"
+  },
+
+  "Color System - Alpha Utility": {
+    "prefix": "alpha",
+    "body": [
+      "\\${({ theme }) => alpha(theme.colors.${1:primary}.${2:main}, ${3:0.5})}"
+    ],
+    "description": "Apply alpha/transparency to a color"
+  },
+
+  "Color System - Darken Utility": {
+    "prefix": "darken",
+    "body": [
+      "\\${({ theme }) => darken(theme.colors.${1:primary}.${2:main}, ${3:0.2})}"
+    ],
+    "description": "Darken a color"
+  },
+
+  "Color System - Lighten Utility": {
+    "prefix": "lighten",
+    "body": [
+      "\\${({ theme }) => lighten(theme.colors.${1:primary}.${2:main}, ${3:0.3})}"
+    ],
+    "description": "Lighten a color"
+  },
+
+  "Color System - Mix Utility": {
+    "prefix": "mix",
+    "body": [
+      "\\${({ theme }) => mix(theme.colors.${1:primary}.main, theme.colors.${2:secondary}.main, ${3:0.5})}"
+    ],
+    "description": "Mix two colors together"
+  },
+
+  "Color System - Color Scale": {
+    "prefix": "themeScale",
+    "body": [
+      "\\${({ theme }) => theme.scales.${1|orange,blue,emerald,green,red,amber,gray,slate,navy|}.${2|50,100,200,300,400,500,600,700,800,900|}}"
+    ],
+    "description": "Access color scale directly"
+  },
+
+  "Color System - Gradient": {
+    "prefix": "themeGradient",
+    "body": [
+      "\\${({ theme }) => theme.gradients.${1|primaryToAccent,primaryLight,primaryDark,primaryBright,accentLight,accentBright,accentGreen,success,danger,warning,info,hero,surface,overlayBottom,overlayFull,shimmer|}}"
+    ],
+    "description": "Insert gradient from theme"
+  },
+
+  "Color System - Shadow": {
+    "prefix": "themeShadow",
+    "body": [
+      "\\${({ theme }) => theme.shadows.${1|none,xs,sm,md,lg,xl,2xl,3xl,card,cardHover,button,buttonHover,modal,dropdown,navbar,footer|}}"
+    ],
+    "description": "Insert shadow from theme"
+  },
+
+  "Color System - Opacity Token": {
+    "prefix": "themeOpacity",
+    "body": [
+      "\\${({ theme }) => theme.opacity.${1|transparent,ghost,whisper,subtle,light,medium,strong,nearSolid,solid|}}"
+    ],
+    "description": "Insert opacity token from theme"
+  },
+
+  "Color System - Styled Component with Colors": {
+    "prefix": "styledColor",
+    "body": [
+      "const ${1:Component} = styled.${2:div}`",
+      "  background: \\${({ theme }) => theme.colors.${3:primary}.${4:main}};",
+      "  color: \\${({ theme }) => theme.colors.text.${5:onPrimary}};",
+      "  border: 1px solid \\${({ theme }) => theme.colors.border.${6:default}};",
+      "  box-shadow: \\${({ theme }) => theme.shadows.${7:card}};",
+      "  ",
+      "  &:hover {",
+      "    background: \\${({ theme }) => theme.colors.${3:primary}.${8:hover}};",
+      "    box-shadow: \\${({ theme }) => theme.shadows.${9:cardHover}};",
+      "  }",
+      "`;"
+    ],
+    "description": "Create styled component with theme colors"
+  },
+
+  "Color System - Button Component": {
+    "prefix": "buttonStyled",
+    "body": [
+      "const ${1:Button} = styled.button<{ \\$variant?: '${2:primary}' | '${3:secondary}' | '${4:danger}' }>`",
+      "  padding: \\${({ theme }) => theme.spacing.sm} \\${({ theme }) => theme.spacing.md};",
+      "  border-radius: \\${({ theme }) => theme.radii.md};",
+      "  font-weight: \\${({ theme }) => theme.typography.fontWeights.semiBold};",
+      "  transition: all 0.2s ease;",
+      "  border: none;",
+      "  cursor: pointer;",
+      "  ",
+      "  \\${({ theme, \\$variant = '${2:primary}' }) => {",
+      "    const colorMap = {",
+      "      ${2:primary}: theme.colors.${2:primary},",
+      "      ${3:secondary}: theme.colors.${3:secondary},",
+      "      ${4:danger}: theme.colors.${4:danger},",
+      "    };",
+      "    ",
+      "    const color = colorMap[\\$variant];",
+      "    ",
+      "    return `",
+      "      background: \\${color.main};",
+      "      color: \\${theme.colors.text.onPrimary};",
+      "      ",
+      "      &:hover {",
+      "        background: \\${color.hover};",
+      "        box-shadow: \\${theme.shadows.buttonHover};",
+      "      }",
+      "      ",
+      "      &:active {",
+      "        background: \\${color.active};",
+      "      }",
+      "    `;",
+      "  }}",
+      "`;"
+    ],
+    "description": "Create button component with variants"
+  },
+
+  "Color System - Card Component": {
+    "prefix": "cardStyled",
+    "body": [
+      "const ${1:Card} = styled.div`",
+      "  background: \\${({ theme }) => theme.colors.surface.default};",
+      "  border: 1px solid \\${({ theme }) => theme.colors.border.default};",
+      "  border-radius: \\${({ theme }) => theme.radii.lg};",
+      "  padding: \\${({ theme }) => theme.spacing.lg};",
+      "  box-shadow: \\${({ theme }) => theme.shadows.card};",
+      "  transition: all 0.2s ease;",
+      "  ",
+      "  &:hover {",
+      "    box-shadow: \\${({ theme }) => theme.shadows.cardHover};",
+      "    border-color: \\${({ theme }) => theme.colors.border.hover};",
+      "  }",
+      "`;"
+    ],
+    "description": "Create card component"
+  },
+
+  "Color System - Badge Component": {
+    "prefix": "badgeStyled",
+    "body": [
+      "import { alpha } from '@/lib/colorUtils';",
+      "",
+      "type BadgeVariant = '${1:success}' | '${2:danger}' | '${3:warning}' | '${4:info}';",
+      "",
+      "const ${5:Badge} = styled.span<{ \\$variant: BadgeVariant }>`",
+      "  display: inline-flex;",
+      "  align-items: center;",
+      "  padding: \\${({ theme }) => theme.spacing.xs} \\${({ theme }) => theme.spacing.sm};",
+      "  border-radius: \\${({ theme }) => theme.radii.full};",
+      "  font-size: 0.875rem;",
+      "  font-weight: \\${({ theme }) => theme.typography.fontWeights.semiBold};",
+      "  ",
+      "  \\${({ theme, \\$variant }) => {",
+      "    const colorMap = {",
+      "      ${1:success}: theme.colors.${1:success},",
+      "      ${2:danger}: theme.colors.${2:danger},",
+      "      ${3:warning}: theme.colors.${3:warning},",
+      "      ${4:info}: theme.colors.${4:info},",
+      "    };",
+      "    ",
+      "    const color = colorMap[\\$variant];",
+      "    ",
+      "    return `",
+      "      background: \\${alpha(color.main, 0.1)};",
+      "      color: \\${color.main};",
+      "      border: 1px solid \\${alpha(color.main, 0.2)};",
+      "    `;",
+      "  }}",
+      "`;"
+    ],
+    "description": "Create badge component with variants"
+  },
+
+  "Color System - Import Color Utils": {
+    "prefix": "importColorUtils",
+    "body": [
+      "import { ${1|alpha,darken,lighten,mix,getContrast,isAccessible|} } from '@/lib/colorUtils';"
+    ],
+    "description": "Import color utility functions"
+  },
+
+  "Color System - Full Import": {
+    "prefix": "importColorUtilsFull",
+    "body": [
+      "import { alpha, darken, lighten, mix } from '@/lib/colorUtils';"
+    ],
+    "description": "Import all common color utilities"
+  }
+}

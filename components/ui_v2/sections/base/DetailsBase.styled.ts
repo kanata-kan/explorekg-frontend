@@ -36,19 +36,18 @@ export const Wrapper = styled.section`
   overflow: hidden;
 `;
 
-/* 🎞️ Image Wrapper */
+// Image Wrapper
 export const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  box-shadow: ${({ theme }) =>
-    theme.shadows?.md || "0 6px 20px rgba(0,0,0,0.15)"};
+  box-shadow: ${({ theme }) => theme.shadows.md};
   will-change: transform, opacity;
-  transform: translateZ(0); /* GPU acceleration */
+  transform: translateZ(0);
 
   &:hover {
-    background-color: ${({ theme }) => darken(theme.colors.surface, 10)};
+    background-color: ${({ theme }) => theme.colors.surface.hover};
     transform: scale(1.01);
   }
 
@@ -61,22 +60,22 @@ export const ImageWrapper = styled.div`
   }
 `;
 
-/* ⚫ Dot Navigation */
+// Dot Navigation
 export const DotNav = styled.div`
   position: absolute;
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 0.6rem;
+  gap: ${({ theme }) => theme.spacing.sm};
 
   button {
     width: 8px;
     height: 8px;
     border-radius: 50%;
     border: none;
-    background: ${({ theme }) => theme.colors.text.muted};
-    opacity: 0.6;
+    background: ${({ theme }) => theme.colors.text.tertiary};
+    opacity: ${({ theme }) => theme.opacity[60]};
     transition: all 0.3s ease;
     cursor: pointer;
 
@@ -108,20 +107,20 @@ export const CTASection = styled.div`
   }
 `;
 
-/* 🔙 Back Link */
+// Back Link
 export const BackLink = styled.div`
   margin-top: ${({ theme }) => theme.spacing.md};
 
   a {
-    color: ${({ theme }) => theme.colors.text.muted};
+    color: ${({ theme }) => theme.colors.text.tertiary};
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s ease;
+    gap: ${({ theme }) => theme.spacing.xs};
+    transition: all 0.3s ease;
 
     &:hover {
-      color: ${({ theme }) => theme.colors.primary};
+      color: ${({ theme }) => theme.colors.primary.main};
     }
   }
 `;

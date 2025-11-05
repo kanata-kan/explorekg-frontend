@@ -4,6 +4,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import { overlayGradients } from "@/styles/tokens/gradients";
 
 export const Card = styled(motion.div)`
   position: relative;
@@ -11,8 +12,8 @@ export const Card = styled(motion.div)`
   border-radius: ${({ theme }) => theme.radii.lg};
   cursor: zoom-in;
   aspect-ratio: 4 / 3;
-  background: ${({ theme }) => theme.colors.surface};
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: ${({ theme }) => theme.colors.surface.default};
+  box-shadow: ${({ theme }) => theme.shadows.card};
 
   &:hover img {
     transform: scale(1.08);
@@ -33,12 +34,7 @@ export const Img = styled(Image)`
 export const Overlay = styled.div`
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.65) 0%,
-    rgba(0, 0, 0, 0.3) 60%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: ${overlayGradients.toTop};
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: 1;
@@ -54,7 +50,7 @@ export const Caption = styled.div`
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: ${({ theme }) => theme.spacing.xs};
 `;
 
 export const IconWrap = styled(motion.div)`
@@ -62,10 +58,10 @@ export const IconWrap = styled(motion.div)`
   top: 1rem;
   right: 1rem;
   z-index: 3;
-  color: white;
-  background: rgba(0, 0, 0, 0.35);
-  border-radius: 50%;
-  padding: 0.5rem;
+  color: ${({ theme }) => theme.colors.text.inverse};
+  background: ${({ theme }) => theme.colors.overlay.light};
+  border-radius: ${({ theme }) => theme.radii.full};
+  padding: ${({ theme }) => theme.spacing.xs};
   display: flex;
   align-items: center;
   justify-content: center;

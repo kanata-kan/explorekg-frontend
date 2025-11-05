@@ -12,20 +12,20 @@ import {
 /* 🧱 Wrapper */
 export const Wrapper = styled(WrapperBase)``;
 
-/* 🖼️ Image */
+// Image
 export const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: ${({ theme }) => theme.radii.xl};
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: ${({ theme }) => theme.shadows.md};
   transition: all 0.35s ease;
   cursor: pointer;
 
   &:hover {
     transform: scale(1.02);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    box-shadow: ${({ theme }) => theme.shadows.lg};
   }
 
   img {
@@ -40,10 +40,10 @@ export const ImageWrapper = styled.div`
   }
 `;
 
-/* 📄 Info */
+// Info
 export const InfoSection = styled(InfoSectionBase)``;
 
-/* 🧭 Details List */
+// Details List
 export const DetailsList = styled.ul`
   list-style: none;
   padding: 0;
@@ -52,29 +52,29 @@ export const DetailsList = styled.ul`
   li {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    background-color: ${({ theme }) => theme.colors.surface};
+    gap: ${({ theme }) => theme.spacing.xs};
+    background-color: ${({ theme }) => theme.colors.surface.default};
     border-radius: ${({ theme }) => theme.radii.md};
     padding: ${({ theme }) => theme.spacing.xs};
     margin-bottom: ${({ theme }) => theme.spacing.xs};
-    color: ${({ theme }) => theme.colors.text.muted};
+    color: ${({ theme }) => theme.colors.text.tertiary};
     font-size: 0.9rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    box-shadow: ${({ theme }) => theme.shadows.xs};
     transition: all 0.25s ease;
 
     svg {
-      color: ${({ theme }) => theme.colors.accent};
+      color: ${({ theme }) => theme.colors.primary.main};
       transition: color 0.25s ease;
     }
 
     &:hover {
-      background-color: ${({ theme }) => darken(theme.colors.surface, 8)};
-      color: ${({ theme }) => theme.colors.primary};
+      background-color: ${({ theme }) => theme.colors.surface.hover};
+      color: ${({ theme }) => theme.colors.primary.main};
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      box-shadow: ${({ theme }) => theme.shadows.sm};
 
       svg {
-        color: ${({ theme }) => theme.colors.primary};
+        color: ${({ theme }) => theme.colors.primary.main};
       }
     }
   }
