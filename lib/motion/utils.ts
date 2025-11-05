@@ -162,10 +162,10 @@ export function createRepeating(
 /**
  * Safe motion wrapper - respects reduced motion preferences
  */
-export function safeMotion(
+export function safeMotion<T extends Record<string, any>>(
   shouldAnimate: boolean,
-  animatedProps: any,
-  staticProps: any = {}
-) {
+  animatedProps: T,
+  staticProps: Partial<T> = {}
+): T | Partial<T> {
   return shouldAnimate ? animatedProps : staticProps;
 }

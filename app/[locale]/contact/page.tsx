@@ -84,7 +84,7 @@ export default async function ContactPage({ params }: PageParams) {
     ...contact,
     form: {
       ...contact.form,
-      fields: contact.form.fields.map((field: any) => ({
+      fields: contact.form.fields.map((field) => ({
         name: field.name,
         label: field.label,
         type: field.type,

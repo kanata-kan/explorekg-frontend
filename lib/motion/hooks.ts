@@ -63,7 +63,9 @@ export function useMotionVariants<T>(
  * Hook to get motion-safe transition config
  * Returns instant transition if user prefers reduced motion
  */
-export function useMotionTransition(transition: any) {
+export function useMotionTransition<T extends Record<string, any>>(
+  transition: T
+): T | { duration: 0 } {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   if (prefersReducedMotion) {
