@@ -1,0 +1,30 @@
+[
+  {
+    "id": "transportation",
+    "icon": "/icons/bus.svg",
+    "title": "Transport",
+    "description": "Voyagez en toute sécurité à travers le Kirghizistan.",
+    "link": "/services/transportation"
+  },
+  {
+    "id": "private-tours",
+    "icon": "/icons/hiking.svg",
+    "title": "Circuits Privés",
+    "description": "Itinéraires personnalisés avec des guides experts.",
+    "link": "/services/private-tours"
+  },
+  {
+    "id": "city-tours",
+    "icon": "/icons/city.svg",
+    "title": "Visites de Villes",
+    "description": "Excursions guidées dans les principales villes.",
+    "link": "/services/city-tours"
+  },
+  {
+    "id": "airport-transfers",
+    "icon": "/icons/plane.svg",
+    "title": "Transferts Aéroport",
+    "description": "Prise en charge pratique depuis l’aéroport international de Manas.",
+    "link": "/services/airport-transfers"
+  }
+]

@@ -1,0 +1,9 @@
+[
+  { "label": "Accueil", "href": "/" },
+  { "label": "Formules de Voyage", "href": "/travel-packs" },
+  { "label": "Activités", "href": "/activities" },
+  { "label": "Voitures", "href": "/cars" },
+  { "label": "Galerie", "href": "/gallery" },
+  { "label": "Notre Histoire", "href": "/our-story" },
+  { "label": "Contact", "href": "/contact" }
+]

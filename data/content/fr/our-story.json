@@ -1,0 +1,33 @@
+{
+  "id": "our-story",
+  "heading": "Notre Histoire",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Nous sommes venus pour la première fois au Kirghizistan comme voyageurs, et non comme entrepreneurs. Ce devait être de simples vacances en famille : une occasion de respirer l’air pur des montagnes, de voir nos enfants s’émerveiller sous un ciel immense, et de partager des moments loin du quotidien. Mais ce voyage est devenu bien plus que cela."
+    },
+    {
+      "type": "paragraph",
+      "text": "Guidés par un local qui connaissait chaque col caché, chaque campement de yourtes et chaque histoire portée par le vent, nous avons découvert le Kirghizistan comme peu d’étrangers le font. Il n’était pas seulement un chauffeur : c’était un conteur, un protecteur sur les routes accidentées, et un pont vers une culture à la fois ancienne et vivante."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cette expérience nous a accompagnés bien après notre retour à la maison. Nous avons compris que le Kirghizistan n’est pas simplement un lieu à visiter — c’est une terre à ressentir, à vivre et à partager. C’est ainsi qu’est né « Explore Kyrgyzstan by Rent & Ride » : une manière d’ouvrir ces mêmes portes à d’autres familles, aventuriers et rêveurs."
+    },
+    {
+      "type": "paragraph",
+      "text": "Aujourd’hui, nous combinons des véhicules 4×4 bien entretenus, des chauffeurs-guides locaux formés, et des années de partenariats de confiance à travers le pays. Notre promesse est simple : rendre votre voyage sûr, flexible et inoubliable, afin que vous puissiez vous concentrer sur la magie de la route pendant que nous nous occupons du reste."
+    },
+    {
+      "type": "heading",
+      "text": "« Rendre accessibles, authentiques et sûrs les lieux les plus cachés du monde — guidés par ceux qui les connaissent le mieux : les nomades eux-mêmes. »"
+    }
+  ],
+  "metadata": {
+    "title": "Notre Histoire | Nomadia Travels",
+    "description": "Découvrez l’histoire de Nomadia Travels et notre mission : partager le Kirghizistan avec le monde.",
+    "path": "/our-story",
+    "image": "/images/our-story-og.png",
+    "alt": "L’histoire et la mission de Nomadia Travels"
+  }
+}

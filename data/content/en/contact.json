@@ -1,0 +1,57 @@
+{
+  "id": "contact-page",
+  "heading": "Contact Us",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Have questions about our tours, cars, or activities? We’re here to help. Send us a message and we’ll get back to you as soon as possible."
+    }
+  ],
+  "form": {
+    "fields": [
+      {
+        "name": "name",
+        "label": "Your Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "required": true
+      },
+      {
+        "name": "subject",
+        "label": "Subject",
+        "type": "text",
+        "required": false
+      },
+      {
+        "name": "message",
+        "label": "Message",
+        "type": "textarea",
+        "required": true
+      }
+    ],
+    "submitText": "Send Message"
+  },
+  "info": {
+    "email": "info@nomadiatravels.com",
+    "phone": "+996 555 123 456",
+    "address": "Bishkek, Kyrgyzstan",
+    "mapLink": "https://goo.gl/maps/example"
+  },
+  "socials": [
+    { "platform": "Facebook", "url": "https://facebook.com/nomadiatravels" },
+    { "platform": "Instagram", "url": "https://instagram.com/nomadiatravels" },
+    { "platform": "WhatsApp", "url": "https://wa.me/996555123456" }
+  ],
+  "metadata": {
+    "title": "Contact Us | Nomadia Travels",
+    "description": "Get in touch with Nomadia Travels for travel inquiries, support, and partnerships.",
+    "path": "/contact",
+    "image": "/images/contact-og.png",
+    "alt": "Nomadia Travels contact form and contact details"
+  }
+}

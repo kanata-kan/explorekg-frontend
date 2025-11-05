@@ -1,0 +1,57 @@
+{
+  "name": "nomadia-travels-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "lint:check": "pnpm exec eslint app components hooks styles types data --ext .ts,.tsx --no-error-on-unmatched-pattern",
+    "lint:fix": "pnpm exec eslint app components hooks styles types data --ext .ts,.tsx --fix --no-error-on-unmatched-pattern",
+    "prepare": "husky",
+    "test:validation": "ts-node tests/data-validation.test.ts",
+    "analyze": "cross-env ANALYZE=true next build"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "critters": "^0.0.25",
+    "framer-motion": "^12.23.22",
+    "lodash": "^4.17.21",
+    "next": "15.5.3",
+    "next-intl": "^4.3.9",
+    "polished": "^4.3.1",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-icons": "^5.5.0",
+    "styled-components": "^6.1.19",
+    "styled-jsx": "^5.1.7",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@next/bundle-analyzer": "^15.5.4",
+    "@types/lodash": "^4.17.20",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "cross-env": "^10.1.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@10.16.1"
+}

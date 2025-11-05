@@ -1,0 +1,144 @@
+[
+  {
+    "id": "car-1",
+    "name": "BMW X7 (2024)",
+    "description": "A luxury SUV that blends elegance, cutting-edge technology, and power — designed for travelers who want to experience Kyrgyzstan in style and comfort. The BMW X7 offers the smoothness of a high-end vehicle while remaining fully equipped for Kyrgyzstan’s diverse landscapes.",
+    "coverImage": "/images/cars/BMW X7/BMW-X7-cover-img.webp",
+    "price": 180,
+    "currency": "USD",
+    "unit": "day",
+    "seats": "7",
+    "transmission": "Automatic",
+    "drive": "4x4 xDrive",
+    "luggage": "Large",
+    "fuel": "Petrol",
+    "metadata": {
+      "title": "BMW X7 (2024) — Luxury SUV Rental in Kyrgyzstan",
+      "description": "Experience Kyrgyzstan in elegance and power with the 2024 BMW X7 — luxury SUV for comfort and adventure.",
+      "path": "/cars/car-1",
+      "image": "/images/cars/BMW X7/BMW-X7-cover-img.webp",
+      "alt": "BMW X7 2024 luxury SUV available for rental"
+    },
+    "images": [
+      "/images/cars/BMW X7/BMW-X7-img-1.webp",
+      "/images/cars/BMW X7/BMW-X7-img-2.webp",
+      "/images/cars/BMW X7/BMW-X7-img-3.webp",
+      "/images/cars/BMW X7/BMW-X7-img-4.webp",
+      "/images/cars/BMW X7/BMW-X7-img-5.webp"
+    ]
+  },
+  {
+    "id": "car-2",
+    "name": "Mercedes-Benz Sprinter Minibus",
+    "description": "A reliable and spacious minibus perfect for group adventures across Kyrgyzstan. Known for its durability, capacity, and comfort during long journeys — ideal for shared travel experiences.",
+    "coverImage": "/images/cars/BUS/BUS-cover-img.webp",
+    "price": 140,
+    "currency": "USD",
+    "unit": "day",
+    "seats": "15–20",
+    "transmission": "Manual",
+    "drive": "2WD Diesel",
+    "luggage": "Extra Large",
+    "fuel": "Diesel",
+    "metadata": {
+      "title": "Mercedes-Benz Sprinter — Group Minibus Rental in Kyrgyzstan",
+      "description": "Travel together across Kyrgyzstan with the reliable Mercedes-Benz Sprinter Minibus — perfect for group tours.",
+      "path": "/cars/car-2",
+      "image": "/images/cars/BUS/BUS-cover-img.webp",
+      "alt": "Mercedes-Benz Sprinter Minibus available for group rental"
+    },
+    "images": [
+      "/images/cars/BUS/BUS-img-1.webp",
+      "/images/cars/BUS/BUS-img-2.webp",
+      "/images/cars/BUS/BUS-img-3.webp",
+      "/images/cars/BUS/BUS-img-4.webp"
+    ]
+  },
+  {
+    "id": "car-3",
+    "name": "Jeep Wrangler (2022)",
+    "description": "An icon of freedom and adventure, the Jeep Wrangler is built for travelers who want to experience Kyrgyzstan’s wilderness up close. Agile, powerful, and authentic — perfect for rugged off-road exploration.",
+    "coverImage": "/images/cars/JEEP WRANGLER/JEEP-cover-img.webp",
+    "price": 120,
+    "currency": "USD",
+    "unit": "day",
+    "seats": "4",
+    "transmission": "Automatic",
+    "drive": "4x4",
+    "luggage": "Medium",
+    "fuel": "Petrol",
+    "metadata": {
+      "title": "Jeep Wrangler (2022) — Off-Road Rental in Kyrgyzstan",
+      "description": "Explore Kyrgyzstan’s remote trails with the iconic Jeep Wrangler — the perfect blend of thrill and authenticity.",
+      "path": "/cars/car-3",
+      "image": "/images/cars/JEEP WRANGLER/JEEP-cover-img.webp",
+      "alt": "Jeep Wrangler 2022 off-road SUV for rental"
+    },
+    "images": [
+      "/images/cars/JEEP WRANGLER/JEEP -img-1.webp",
+      "/images/cars/JEEP WRANGLER/JEEP -img-2.webp",
+      "/images/cars/JEEP WRANGLER/JEEP -img-3.webp",
+      "/images/cars/JEEP WRANGLER/JEEP -img-4.webp",
+      "/images/cars/JEEP WRANGLER/JEEP -img-5.webp"
+    ]
+  },
+  {
+    "id": "car-4",
+    "name": "Toyota Land Cruiser",
+    "description": "The legendary 4x4 built for strength, reliability, and adventure — the Toyota Land Cruiser remains the ultimate companion for exploring Kyrgyzstan’s toughest terrains. Trusted worldwide, combining technology and rugged heritage.",
+    "coverImage": "/images/cars/TOYOTA LAND CRUISER/T-CRUISER-cover-img.webp",
+    "price": 100,
+    "currency": "USD",
+    "unit": "day",
+    "seats": "5–7",
+    "transmission": "Automatic/Manual",
+    "drive": "4x4",
+    "luggage": "Large",
+    "fuel": "Diesel",
+    "metadata": {
+      "title": "Toyota Land Cruiser — Reliable 4x4 SUV for Kyrgyzstan Adventures",
+      "description": "Conquer Kyrgyzstan’s wild landscapes with the iconic Toyota Land Cruiser — unmatched reliability and performance.",
+      "path": "/cars/car-4",
+      "image": "/images/cars/TOYOTA LAND CRUISER/T-CRUISER-cover-img.webp",
+      "alt": "Toyota Land Cruiser available for adventure rental"
+    },
+    "images": [
+      "/images/cars/TOYOTA LAND CRUISER/T-CRUISER-img-1.webp",
+      "/images/cars/TOYOTA LAND CRUISER/T-CRUISER-img-2.webp",
+      "/images/cars/TOYOTA LAND CRUISER/T-CRUISER-img-3.webp",
+      "/images/cars/TOYOTA LAND CRUISER/T-CRUISER-img-4.webp",
+      "/images/cars/TOYOTA LAND CRUISER/T-CRUISER-img-5.webp",
+      "/images/cars/TOYOTA LAND CRUISER/T-CRUISER-img-6.webp",
+      "/images/cars/TOYOTA LAND CRUISER/T-CRUISER-img-7.webp"
+    ]
+  },
+  {
+    "id": "car-5",
+    "name": "Toyota Sequoia (2009)",
+    "description": "A powerful and spacious SUV, perfect for families or groups who value both comfort and strength when exploring Kyrgyzstan’s rugged roads. The Toyota Sequoia ensures safety and comfort on every journey.",
+    "coverImage": "/images/cars/TOYOTA SEQUOIA/T-SEQUOIA-cover-img.webp",
+    "price": 90,
+    "currency": "USD",
+    "unit": "day",
+    "seats": "7",
+    "transmission": "Automatic/Manual",
+    "drive": "4x4",
+    "luggage": "Large",
+    "fuel": "Petrol",
+    "metadata": {
+      "title": "Toyota Sequoia (2009) — Family SUV Rental in Kyrgyzstan",
+      "description": "Spacious and strong, the Toyota Sequoia is perfect for comfortable and safe family adventures across Kyrgyzstan.",
+      "path": "/cars/car-5",
+      "image": "/images/cars/TOYOTA SEQUOIA/T-SEQUOIA-cover-img.webp",
+      "alt": "Toyota Sequoia family SUV available for rental"
+    },
+    "images": [
+      "/images/cars/TOYOTA SEQUOIA/T-SEQUOIA-img-1.webp",
+      "/images/cars/TOYOTA SEQUOIA/T-SEQUOIA-img-2.webp",
+      "/images/cars/TOYOTA SEQUOIA/T-SEQUOIA-img-3.webp",
+      "/images/cars/TOYOTA SEQUOIA/T-SEQUOIA-img-4.webp",
+      "/images/cars/TOYOTA SEQUOIA/T-SEQUOIA-img-5.webp",
+      "/images/cars/TOYOTA SEQUOIA/T-SEQUOIA-img-6.webp"
+    ]
+  }
+]

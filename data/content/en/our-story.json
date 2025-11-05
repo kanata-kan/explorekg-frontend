@@ -1,0 +1,33 @@
+{
+  "id": "our-story",
+  "heading": "Our Story",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "We first came to Kyrgyzstan as travelers, not entrepreneurs. It was meant to be a simple family holiday; a chance to breathe fresh mountain air, watch our children marvel at wide open skies, and share moments far away from daily life. But the journey became something more."
+    },
+    {
+      "type": "paragraph",
+      "text": "Guided by a local who knew every hidden pass, every yurt camp, and every story carried by the wind, we discovered Kyrgyzstan in a way few outsiders ever do. He was more than a driver: he was a storyteller, a protector on rugged roads, and a bridge to a culture both ancient and alive."
+    },
+    {
+      "type": "paragraph",
+      "text": "That experience stayed with us long after we returned home. We realized Kyrgyzstan is not just a place to visit — it is a land to be felt, lived, and shared. And so Explore Kyrgyzstan by Rent & Ride was born: a way to open these same doors for other families, adventurers, and dreamers."
+    },
+    {
+      "type": "paragraph",
+      "text": "Today, we combine well-maintained 4×4 vehicles, trained local driver-guides, backed by years of trusted partnerships across the country. Our promise is simple: to make your journey safe, flexible, and unforgettable, so you can focus on the magic of the road while we take care of the rest."
+    },
+    {
+      "type": "heading",
+      "text": "“To make the world’s most hidden places accessible, authentic, and safe — guided by the people who know them best: the nomads themselves.”"
+    }
+  ],
+  "metadata": {
+    "title": "Our Story | Nomadia Travels",
+    "description": "Discover the origin story of Nomadia Travels and our mission to share Kyrgyzstan with the world.",
+    "path": "/our-story",
+    "image": "/images/our-story-og.png",
+    "alt": "Nomadia Travels story and mission"
+  }
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "transportation",
+    "icon": "/icons/bus.svg",
+    "title": "Transportation",
+    "description": "Safe and reliable travel across Kyrgyzstan.",
+    "link": "/services/transportation"
+  },
+  {
+    "id": "private-tours",
+    "icon": "/icons/hiking.svg",
+    "title": "Private Tours",
+    "description": "Tailored itineraries with expert guides.",
+    "link": "/services/private-tours"
+  },
+  {
+    "id": "city-tours",
+    "icon": "/icons/city.svg",
+    "title": "City Tours",
+    "description": "Guided sightseeing in major cities.",
+    "link": "/services/city-tours"
+  },
+  {
+    "id": "airport-transfers",
+    "icon": "/icons/plane.svg",
+    "title": "Airport Transfers",
+    "description": "Convenient pickups from Manas International Airport.",
+    "link": "/services/airport-transfers"
+  }
+]

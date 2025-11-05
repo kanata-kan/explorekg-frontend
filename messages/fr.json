@@ -1,0 +1,169 @@
+{
+  "home": {
+    "welcome": "Bienvenue chez Nomadia Travels!"
+  },
+  "homePage": {
+    "title": "Explorez le Kirghizistan — L'aventure nomade vous attend",
+    "description": "Découvrez les paysages majestueux, les lacs et la culture nomade du Kirghizistan avec Nomadia Travels."
+  },
+  "carsPage": {
+    "title": "Toutes les voitures",
+    "description": "Découvrez toutes les voitures disponibles pour votre aventure au Kirghizistan."
+  },
+  "carsSection": {
+    "title": "Voitures disponibles",
+    "subtitle": "Choisissez parmi notre flotte de voitures pour votre aventure au {country}.",
+    "viewAll": "Voir toutes",
+    "ctaLabel": "Voir les détails",
+    "viewDetails": "Voir les détails"
+  },
+  "carDetails": {
+    "about": "À propos de cette voiture",
+    "book": "Réserver cette voiture",
+    "back": "Retour aux voitures",
+    "seats": "sièges",
+    "fuel": "Type de carburant",
+    "transmission": "Transmission",
+    "luggage": "Bagages",
+    "price": "Prix par jour",
+    "viewAll": "Voir tout",
+    "viewDetails": "Voir les détails"
+  },
+  "carGallery": {
+    "title": "Galerie de {name}",
+    "empty": "Aucune photo supplémentaire disponible pour cette voiture."
+  },
+  "galleryPage": {
+    "title": "Galerie — Explorez le Kirghizistan",
+    "description": "Découvrez les paysages à couper le souffle, la culture nomade et la beauté sauvage du Kirghizistan à travers notre galerie de photos."
+  },
+  "activities": {
+    "title": "Activités Disponibles",
+    "subtitle": "Choisissez parmi nos activités sélectionnées pour votre aventure au <strong>Kirghizistan</strong>.",
+    "viewAll": "Voir tout",
+    "cta": "Voir les détails",
+    "viewDetails": "Voir les détails"
+  },
+  "contact": {
+    "info": {
+      "title": "📌 Informations de contact",
+      "mapLink": "Voir sur la carte"
+    },
+    "socials": {
+      "title": "🌐 Suivez-nous"
+    },
+    "form": {
+      "title": "💬 Envoyez-nous un message",
+      "submit": "Envoyer"
+    }
+  },
+  "gallery": {
+    "title": "Galerie de voyage",
+    "subtitle": "Une collection sélectionnée mettant en valeur la beauté du Kirghizistan — des <strong>lacs</strong> et des <strong>montagnes</strong> aux <strong>traditions nomades</strong>."
+  },
+  "galleryDetails": {
+    "openGallery": "Ouvrir la galerie",
+    "moreImages": "Plus d’images",
+    "backToGallery": "Retour à la galerie"
+  },
+  "ourStory": {
+    "heading": "Notre Histoire",
+    "closing": "Nous poursuivons ce voyage avec vous — un voyageur, une histoire à la fois."
+  },
+  "travelPacks": {
+    "title": "Découvrez nos forfaits de voyage",
+    "subtitle": "Explorez nos expériences de voyage soigneusement sélectionnées pour votre prochaine <strong>aventure</strong>.",
+    "viewAll": "Voir tout",
+    "cta": "Voir les détails",
+    "viewDetails": "Voir les détails"
+  },
+  "travelPackDetails": {
+    "featuresTitle": "Caractéristiques",
+    "durationTitle": "Durée",
+    "priceTitle": "Prix",
+    "ctaButton": "Réserver ce pack",
+    "back": "Retour aux packs"
+  },
+  "privacyPage": {
+    "title": "Politique de Confidentialité",
+    "description": "Découvrez comment Nomadia Travels collecte, utilise et protège vos informations personnelles.",
+    "lastUpdated": "Dernière mise à jour le",
+    "section1": {
+      "title": "1. Collecte des Données",
+      "text": "Nous collectons uniquement les informations nécessaires pour fournir et améliorer nos services, y compris les coordonnées et les informations de réservation soumises via nos formulaires en ligne."
+    },
+    "section2": {
+      "title": "2. Utilisation des Informations",
+      "text": "Vos informations sont utilisées uniquement pour la communication, les offres de voyage personnalisées et l’amélioration de nos services. Nous ne vendons ni ne partageons vos données avec des tiers sans votre consentement."
+    },
+    "section3": {
+      "title": "3. Protection des Données",
+      "text": "Nous mettons en place des mesures de sécurité telles que le chiffrement et le stockage sécurisé pour protéger vos données contre tout accès, modification ou divulgation non autorisés."
+    }
+  },
+  "terms": {
+    "title": "Conditions d'utilisation",
+    "description": "Lisez les conditions générales d'utilisation des services, du site web et des réservations de Nomadia Travels.",
+    "lastUpdated": "Dernière mise à jour :",
+    "section1": {
+      "title": "1. Introduction",
+      "text": "Ces conditions d'utilisation régissent votre utilisation du site Web et des services de Nomadia Travels. En accédant à notre plateforme, vous acceptez ces conditions."
+    },
+    "section2": {
+      "title": "2. Utilisation des services",
+      "text": "Vous ne pouvez utiliser nos services qu'en conformité avec les lois applicables. Tout usage abusif, y compris les réservations frauduleuses ou l'accès non autorisé, est strictement interdit."
+    },
+    "section3": {
+      "title": "3. Responsabilité",
+      "text": "Nomadia Travels n'est pas responsable des dommages indirects. Notre responsabilité est limitée dans la mesure maximale autorisée par la loi."
+    }
+  },
+  "activityDetails": {
+    "aboutTitle": "À propos de cette activité",
+    "duration": "Durée",
+    "location": "Emplacement",
+    "groupSize": "Taille du groupe",
+    "price": "Prix",
+    "bookNow": "Réserver cette activité",
+    "backToActivities": "Retour aux activités"
+  },
+  "servicesSection": {
+    "title": "Nos Services",
+    "subtitle": "Nous offrons des transports fiables, des circuits sur mesure et des expériences inoubliables à travers le Kirghizistan."
+  },
+  "lightbox": {
+    "viewDetails": "Voir les détails →",
+    "prev": "← Précédent",
+    "next": "Suivant →",
+    "close": "✕ Fermer",
+    "swipeToNavigate": "Balayez pour naviguer"
+  },
+  "ourStoryPage": {
+    "title": "Notre Histoire — L'esprit derrière Nomadia Travels",
+    "description": "Découvrez le parcours, la vision et la mission de Nomadia Travels — reliant les voyageurs à la culture nomade du Kirghizistan."
+  },
+  "activitiesPage": {
+    "title": "Toutes les Activités — Explorez le Kirghizistan",
+    "description": "Découvrez toutes les aventures disponibles au Kirghizistan : randonnées, balades à cheval, séjours en yourte et bien plus encore avec Nomadia Travels."
+  },
+  "travelPacksPage": {
+    "title": "Tous les Forfaits de Voyage — Explorez le Kirghizistan",
+    "description": "Découvrez nos forfaits de voyage soigneusement sélectionnés pour des aventures inoubliables à travers le Kirghizistan, des montagnes aux lacs."
+  },
+  "contactPage": {
+    "title": "Contact — Nomadia Travels",
+    "description": "Des questions ou besoin d'aide ? Contactez Nomadia Travels pour des expériences sur mesure, la location de voitures et des conseils de voyage au Kirghizistan."
+  },
+  "ResponsiveGallery": {
+    "noImages": "Aucune image disponible",
+    "loading": "Chargement...",
+    "previousImage": "Image précédente",
+    "nextImage": "Image suivante",
+    "goToImage": "Aller à l'image {index}",
+    "currentImage": "Image {current} sur {total}",
+    "swipeHint": "← Glisser →",
+    "zoom": "Zoom",
+    "image": "Image",
+    "of": "sur"
+  }
+}

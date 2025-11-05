@@ -1,0 +1,120 @@
+[
+  {
+    "id": "activity-1",
+    "name": "Cours de cuisine kirghize authentique – Beshbarmak",
+    "description": "Découvrez le plat le plus emblématique du Kirghizistan — le Beshbarmak, qui signifie «cinq doigts». Une expérience culinaire immersive mêlant histoire, tradition et saveurs locales.",
+    "coverImage": "/images/activities/beshbarmak-cooking-classes/BCC-cover-img.webp",
+    "images": [
+      "/images/activities/beshbarmak-cooking-classes/BCC-img-1.webp",
+      "/images/activities/beshbarmak-cooking-classes/BCC-img-3.webp",
+      "/images/activities/beshbarmak-cooking-classes/BCC-img-4.webp"
+    ],
+    "duration": "1h30",
+    "location": "Musée de Naryn ou maison d’hôtes locale",
+    "groupSize": "Petit groupe convivial (idéal pour familles ou amis)",
+    "price": 0,
+    "metadata": {
+      "title": "Cours de cuisine kirghize authentique – Beshbarmak",
+      "description": "Cuisinez et partagez le Beshbarmak, le plat national du Kirghizistan, dans un cadre authentique et culturel.",
+      "path": "/activities/activity-1",
+      "image": "/images/activities/beshbarmak-cooking-classes/BCC-cover-img.webp",
+      "alt": "Participants apprenant à cuisiner le Beshbarmak au Kirghizistan"
+    }
+  },
+  {
+    "id": "activity-2",
+    "name": "Spectacle de chasse à l’aigle – Avec un champion du monde",
+    "description": "Assistez à l’une des traditions les plus impressionnantes du Kirghizistan : l’art ancestral de la chasse à l’aigle, présenté par un dresseur triple champion des Jeux Nomades Mondiaux.",
+    "coverImage": "/images/activities/eagle-hunting-show/EHS-cover-img.webp",
+    "images": [
+      "/images/activities/eagle-hunting-show/EHS-img-1.webp",
+      "/images/activities/eagle-hunting-show/EHS-img-2.webp",
+      "/images/activities/eagle-hunting-show/EHS-img-3.webp",
+      "/images/activities/eagle-hunting-show/EHS-img-4.webp",
+      "/images/activities/eagle-hunting-show/EHS-img-5.webp",
+      "/images/activities/eagle-hunting-show/EHS-img-6.webp"
+    ],
+    "duration": "1 à 2 heures",
+    "location": "Village d’Alysh, près des montagnes de Salkyn Tor",
+    "groupSize": "Tout type de groupe",
+    "price": 0,
+    "metadata": {
+      "title": "Spectacle de chasse à l’aigle – Avec un champion du monde",
+      "description": "Découvrez une démonstration de chasse à l’aigle par un triple champion des Jeux Nomades Mondiaux.",
+      "path": "/activities/activity-2",
+      "image": "/images/activities/eagle-hunting-show/EHS-cover-img.webp",
+      "alt": "Dresseur d’aigle lors d’une démonstration dans les montagnes du Kirghizistan"
+    }
+  },
+  {
+    "id": "activity-3",
+    "name": "Aventure équestre et culturelle de 8 jours – Région de Naryn",
+    "description": "Découvrez le cœur intact du Kirghizistan lors d’un voyage inoubliable de 8 jours à travers montagnes, villages et sites historiques de la Route de la Soie.",
+    "coverImage": "/images/activities/eight-days-horse-trekking-tour/8-DHT-cover-img.webp",
+    "images": [
+      "/images/activities/eight-days-horse-trekking-tour/8-DHT-img-1.webp",
+      "/images/activities/eight-days-horse-trekking-tour/8-DHT-img-2.webp",
+      "/images/activities/eight-days-horse-trekking-tour/8-DHT-img-3.webp"
+    ],
+    "duration": "8 jours / 7 nuits",
+    "location": "Région de Naryn (plusieurs villages et sites emblématiques)",
+    "groupSize": "2 à 8 participants",
+    "price": 0,
+    "metadata": {
+      "title": "Randonnée équestre de 8 jours – Région de Naryn",
+      "description": "Parcourez montagnes, villages et vestiges de la Route de la Soie lors d’une aventure équestre de 8 jours.",
+      "path": "/activities/activity-3",
+      "image": "/images/activities/eight-days-horse-trekking-tour/8-DHT-cover-img.webp",
+      "alt": "Cavaliers traversant les paysages montagneux du Kirghizistan"
+    }
+  },
+  {
+    "id": "activity-4",
+    "name": "Randonnée à cheval vers la cascade de Shaar",
+    "description": "Partez sur des sentiers de montagne spectaculaires jusqu’à la cascade cachée de Shaar, la plus haute d’Asie centrale.",
+    "coverImage": "/images/activities/one-day-horse-trekking/1-DHT-cover-img.webp",
+    "images": [
+      "/images/activities/one-day-horse-trekking/1-DHT-img-1.webp",
+      "/images/activities/one-day-horse-trekking/1-DHT-img-2.webp",
+      "/images/activities/one-day-horse-trekking/1-DHT-img-3.webp"
+    ],
+    "duration": "Excursion d’une journée (environ 28 km aller-retour)",
+    "location": "Sentier de la cascade de Shaar (région de Naryn)",
+    "groupSize": "2 à 6 participants",
+    "price": 0,
+    "metadata": {
+      "title": "Randonnée à cheval – Cascade de Shaar",
+      "description": "Aventure équestre d’une journée vers la plus haute cascade du Kirghizistan.",
+      "path": "/activities/activity-4",
+      "image": "/images/activities/one-day-horse-trekking/1-DHT-cover-img.webp",
+      "alt": "Cavaliers approchant la cascade de Shaar"
+    }
+  },
+  {
+    "id": "activity-5",
+    "name": "Camping dans les montagnes kirghizes",
+    "description": "Terminez vos journées sous un ciel étoilé, entouré de silence, d’air pur et de la beauté sauvage des montagnes kirghizes.",
+    "coverImage": "/images/activities/the-camping/TC-cover-img.webp",
+    "images": [
+      "/images/activities/the-camping/TC-img-1.webp",
+      "/images/activities/the-camping/TC-img-2.webp",
+      "/images/activities/the-camping/TC-img-3.webp",
+      "/images/activities/the-camping/TC-img-4.webp",
+      "/images/activities/the-camping/TC-img-5.webp",
+      "/images/activities/the-camping/TC-img-6.webp",
+      "/images/activities/the-camping/TC-img-7.webp",
+      "/images/activities/the-camping/TC-img-8.webp"
+    ],
+    "duration": "Nuitée (personnalisable)",
+    "location": "Campements de montagne à travers le Kirghizistan",
+    "groupSize": "Tout type de groupe",
+    "price": 0,
+    "metadata": {
+      "title": "Camping dans les montagnes kirghizes",
+      "description": "Passez des nuits sous les étoiles dans la nature sauvage et préservée du Kirghizistan.",
+      "path": "/activities/activity-5",
+      "image": "/images/activities/the-camping/TC-cover-img.webp",
+      "alt": "Tentes installées pour le camping dans une vallée montagneuse du Kirghizistan"
+    }
+  }
+]

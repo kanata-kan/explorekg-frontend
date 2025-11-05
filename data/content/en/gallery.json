@@ -1,0 +1,119 @@
+[
+  {
+    "id": "gallery-1",
+    "title": "Issyk-Kul Lake",
+    "image": "/images/gallery/issyk-kul.jpg",
+    "caption": "Blue Paradise",
+    "metadata": {
+      "title": "Issyk-Kul Lake | Gallery",
+      "description": "Breathtaking view of Issyk-Kul Lake in Kyrgyzstan.",
+      "path": "/gallery/gallery-1",
+      "image": "/images/gallery/issyk-kul.jpg",
+      "alt": "Scenic view of Issyk-Kul Lake"
+    }
+  },
+  {
+    "id": "gallery-2",
+    "title": "Eagle Hunter",
+    "image": "/images/gallery/eagle-hunter.jpg",
+    "caption": "Nomadic Tradition",
+    "metadata": {
+      "title": "Eagle Hunter | Gallery",
+      "description": "Traditional eagle hunting experience in Kyrgyzstan.",
+      "path": "/gallery/gallery-2",
+      "image": "/images/gallery/eagle-hunter.jpg",
+      "alt": "Kyrgyz eagle hunter with his eagle"
+    }
+  },
+  {
+    "id": "gallery-3",
+    "title": "Song-Kul Yurt",
+    "image": "/images/gallery/song-kul-yurt.jpg",
+    "caption": "Nomad Life",
+    "metadata": {
+      "title": "Song-Kul Yurt | Gallery",
+      "description": "Authentic yurt experience at Song-Kul Lake.",
+      "path": "/gallery/gallery-3",
+      "image": "/images/gallery/song-kul-yurt.jpg",
+      "alt": "Yurt on the plains of Song-Kul Lake"
+    }
+  },
+  {
+    "id": "gallery-4",
+    "title": "Shaar Waterfall",
+    "image": "/images/gallery/shaar-waterfall.jpg",
+    "caption": "Nature’s Power",
+    "metadata": {
+      "title": "Shaar Waterfall | Gallery",
+      "description": "One of the highest waterfalls in Central Asia.",
+      "path": "/gallery/gallery-4",
+      "image": "/images/gallery/shaar-waterfall.jpg",
+      "alt": "Shaar waterfall in Kyrgyzstan"
+    }
+  },
+  {
+    "id": "gallery-5",
+    "title": "Tian Shan Mountains",
+    "image": "/images/gallery/tian-shan.jpg",
+    "caption": "Celestial Mountains",
+    "metadata": {
+      "title": "Tian Shan Mountains | Gallery",
+      "description": "Snow-capped peaks of the Tian Shan mountain range.",
+      "path": "/gallery/gallery-5",
+      "image": "/images/gallery/tian-shan.jpg",
+      "alt": "Tian Shan snowy mountains in Kyrgyzstan"
+    }
+  },
+  {
+    "id": "gallery-6",
+    "title": "Osh Bazaar",
+    "image": "/images/gallery/osh-bazaar.jpg",
+    "caption": "Colors of Culture",
+    "metadata": {
+      "title": "Osh Bazaar | Gallery",
+      "description": "Vibrant local market in Bishkek, full of life and colors.",
+      "path": "/gallery/gallery-6",
+      "image": "/images/gallery/osh-bazaar.jpg",
+      "alt": "Vibrant Osh Bazaar in Bishkek"
+    }
+  },
+  {
+    "id": "gallery-7",
+    "title": "Arslanbob Walnut Forest",
+    "image": "/images/gallery/arslanbob.jpg",
+    "caption": "Nature’s Gift",
+    "metadata": {
+      "title": "Arslanbob Forest | Gallery",
+      "description": "The world’s largest natural walnut forest.",
+      "path": "/gallery/gallery-7",
+      "image": "/images/gallery/arslanbob.jpg",
+      "alt": "Arslanbob walnut forest in Kyrgyzstan"
+    }
+  },
+  {
+    "id": "gallery-8",
+    "title": "Ala Archa National Park",
+    "image": "/images/gallery/ala-archa.jpg",
+    "caption": "Hiker’s Paradise",
+    "metadata": {
+      "title": "Ala Archa | Gallery",
+      "description": "Stunning alpine park near Bishkek, perfect for trekking.",
+      "path": "/gallery/gallery-8",
+      "image": "/images/gallery/ala-archa.jpg",
+      "alt": "Scenic view of Ala Archa National Park"
+    }
+  },
+  {
+    "id": "gallery-9",
+    "title": "Burana Tower",
+    "image": "/images/gallery/burana-tower.jpg",
+    "caption": "Ancient Heritage",
+    "metadata": {
+      "title": "Burana Tower | Gallery",
+      "description": "Historic minaret from the ancient Silk Road city of Balasagun.",
+      "path": "/gallery/gallery-9",
+      "image": "/images/gallery/burana-tower.jpg",
+      "alt": "Burana Tower near Tokmok in Kyrgyzstan"
+    }
+  }
+]

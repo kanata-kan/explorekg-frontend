@@ -1,0 +1,169 @@
+{
+  "home": {
+    "welcome": "Welcome to Nomadia Travels!"
+  },
+  "carsPage": {
+    "title": "All Cars",
+    "description": "Browse all available cars for your Kyrgyzstan adventure."
+  },
+  "homePage": {
+    "title": "Explore Kyrgyzstan — Nomadic Adventures Await",
+    "description": "Discover the majestic landscapes, lakes, and nomadic culture of Kyrgyzstan with Nomadia Travels."
+  },
+  "carsSection": {
+    "title": "Available Cars",
+    "subtitle": "Choose from our fleet of cars for your {country} adventure.",
+    "viewAll": "View all",
+    "ctaLabel": "View Details",
+    "viewDetails": "View Details"
+  },
+  "carDetails": {
+    "about": "About this car",
+    "book": "Book this Car",
+    "back": "Back to Cars",
+    "seats": "seats",
+    "fuel": "Fuel Type",
+    "transmission": "Transmission",
+    "luggage": "Luggage",
+    "price": "Price per day",
+    "viewAll": "View all",
+    "viewDetails": "View Details"
+  },
+  "carGallery": {
+    "title": "Gallery of {name}",
+    "empty": "No additional photos available for this car."
+  },
+  "galleryPage": {
+    "title": "Gallery — Explore Kyrgyzstan",
+    "description": "Discover the breathtaking landscapes, nomadic culture, and wild beauty of Kyrgyzstan through our curated photo gallery."
+  },
+  "activities": {
+    "title": "Available Activities",
+    "subtitle": "Choose from our curated activities for your <strong>Kyrgyzstan</strong> adventure.",
+    "viewAll": "View all",
+    "cta": "View Details",
+    "viewDetails": "View Details"
+  },
+  "contact": {
+    "info": {
+      "title": "📌 Contact Information",
+      "mapLink": "View on Map"
+    },
+    "socials": {
+      "title": "🌐 Follow Us"
+    },
+    "form": {
+      "title": "💬 Send us a Message",
+      "submit": "Send"
+    }
+  },
+  "gallery": {
+    "title": "Travel Gallery",
+    "subtitle": "A curated collection showcasing Kyrgyzstan’s beauty — from <strong>lakes</strong> and <strong>mountains</strong> to <strong>nomadic traditions</strong>."
+  },
+  "galleryDetails": {
+    "openGallery": "Open Gallery",
+    "moreImages": "More Images",
+    "backToGallery": "Back to Gallery"
+  },
+  "ourStory": {
+    "heading": "Our Story",
+    "closing": "We continue this journey with you — one traveler, one story at a time."
+  },
+  "travelPacks": {
+    "title": "Explore Travel Packs",
+    "subtitle": "Discover curated travel experiences for your next <strong>adventure</strong>.",
+    "viewAll": "View all",
+    "cta": "View Details",
+    "viewDetails": "View Details"
+  },
+  "travelPackDetails": {
+    "featuresTitle": "Features",
+    "durationTitle": "Duration",
+    "priceTitle": "Price",
+    "ctaButton": "Book this Pack",
+    "back": "Back to Travel Packs"
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "description": "Learn how Nomadia Travels collects, uses, and protects your personal information.",
+    "lastUpdated": "Last updated on",
+    "section1": {
+      "title": "1. Data Collection",
+      "text": "We collect only the information necessary to provide and improve our services, including contact details and booking information submitted through our website forms."
+    },
+    "section2": {
+      "title": "2. Use of Information",
+      "text": "Your information is used solely for communication, personalized travel offers, and service improvements. We never sell or share your data with third parties without consent."
+    },
+    "section3": {
+      "title": "3. Data Protection",
+      "text": "We implement security measures such as encryption and secure storage to protect your data from unauthorized access, alteration, or disclosure."
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "description": "Read the terms and conditions for using Nomadia Travels services, website, and bookings.",
+    "lastUpdated": "Last updated:",
+    "section1": {
+      "title": "1. Introduction",
+      "text": "These Terms of Service govern your use of the Nomadia Travels website and services. By accessing our platform, you agree to these terms."
+    },
+    "section2": {
+      "title": "2. Use of Services",
+      "text": "You may use our services only in compliance with applicable laws. Any misuse, including fraudulent bookings or unauthorized access, is strictly prohibited."
+    },
+    "section3": {
+      "title": "3. Liability",
+      "text": "Nomadia Travels is not responsible for indirect damages. Our liability is limited to the maximum extent permitted by law."
+    }
+  },
+  "activityDetails": {
+    "aboutTitle": "About this Activity",
+    "duration": "Duration",
+    "location": "Location",
+    "groupSize": "Group Size",
+    "price": "Price",
+    "bookNow": "Book this Activity",
+    "backToActivities": "Back to Activities"
+  },
+  "servicesSection": {
+    "title": "Our Services",
+    "subtitle": "We provide reliable transportation, curated tours, and unforgettable experiences across Kyrgyzstan."
+  },
+  "lightbox": {
+    "viewDetails": "View Details →",
+    "prev": "← Prev",
+    "next": "Next →",
+    "close": "✕ Close",
+    "swipeToNavigate": "Swipe to navigate"
+  },
+  "ourStoryPage": {
+    "title": "Our Story — The Spirit Behind Nomadia Travels",
+    "description": "Learn about the journey, vision, and mission of Nomadia Travels — connecting travelers with Kyrgyzstan’s nomadic culture."
+  },
+  "activitiesPage": {
+    "title": "All Activities — Explore Kyrgyzstan",
+    "description": "Discover all available adventures in Kyrgyzstan: hiking, horse trekking, yurt experiences, and more with Nomadia Travels."
+  },
+  "travelPacksPage": {
+    "title": "All Travel Packs — Explore Kyrgyzstan",
+    "description": "Explore our curated travel packs designed for unforgettable adventures across Kyrgyzstan, from the mountains to the lakes."
+  },
+  "contactPage": {
+    "title": "Contact — Nomadia Travels",
+    "description": "Have questions or need assistance? Contact Nomadia Travels for tailor-made experiences, car rentals, and travel advice across Kyrgyzstan."
+  },
+  "ResponsiveGallery": {
+    "noImages": "No images available",
+    "loading": "Loading...",
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
+    "goToImage": "Go to image {index}",
+    "currentImage": "Image {current} of {total}",
+    "swipeHint": "← Swipe →",
+    "zoom": "Zoom",
+    "image": "Image",
+    "of": "of"
+  }
+}
