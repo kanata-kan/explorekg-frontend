@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { FiArrowRight } from "react-icons/fi";
-import { motion } from "framer-motion";
+import { motion, variants, interactions } from "@/lib/motion";
 
 import {
   HeroWrapper,
@@ -60,9 +60,9 @@ export default function HeroSection({
 
       <Content
         $align={align}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        variants={variants.heroEntrance}
+        initial="initial"
+        animate="animate"
       >
         <Title>{title}</Title>
         {subtitle && <Subtitle>{subtitle}</Subtitle>}
@@ -70,8 +70,8 @@ export default function HeroSection({
         {ctaText && ctaLink && (
           <HeroCTA
             href={ctaLink}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
+            whileHover={interactions.hoverScaleMedium}
+            whileTap={interactions.tapScale}
           >
             {ctaText}
             <FiArrowRight />

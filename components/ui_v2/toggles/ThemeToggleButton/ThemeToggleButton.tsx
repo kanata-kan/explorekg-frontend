@@ -4,6 +4,7 @@ import { useThemeToggle } from "@/hooks/useThemeToggle";
 import { m } from "@/lib/motion/motion";
 import { IconButton, IconWrapper } from "./ThemeToggleButton.styled";
 import { FiSun, FiMoon } from "react-icons/fi";
+import { SPRING, interactions } from "@/lib/motion";
 
 export default function ThemeToggleButton() {
   const { isDark, toggleTheme } = useThemeToggle();
@@ -11,8 +12,8 @@ export default function ThemeToggleButton() {
   return (
     <m.div
       initial={{ rotate: 0 }}
-      whileTap={{ scale: 0.9, rotate: 20 }}
-      transition={{ type: "spring", stiffness: 300 }}
+      whileTap={interactions.tapRotate}
+      transition={SPRING.snappy}
     >
       <IconButton onClick={toggleTheme} aria-label="Toggle theme">
         <IconWrapper

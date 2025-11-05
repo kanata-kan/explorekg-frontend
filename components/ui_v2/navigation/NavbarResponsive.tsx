@@ -9,7 +9,7 @@ import {
   DrawerFooter,
   Overlay,
 } from "./Navbar.styled";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, variants } from "@/lib/motion";
 import ThemeToggleButton from "../toggles/ThemeToggleButton/ThemeToggleButton";
 import LanguageSwitcher from "../toggles/LanguageSwitcher/LanguageSwitcher";
 import { usePathname } from "next/navigation";
@@ -20,14 +20,29 @@ import { SITE } from "@/config/constants";
    ------------------------------------------------------------
    - Drawer-based mobile navigation
    - Localized links + Theme/Language toggles
+   - Features animated icons for each route
 */
+
+// Icon mapping for each route
+const getNavIcon = (href: string) => {
+  const icons: Record<string, string> = {
+    "/": "🏠",
+    "/activities": "🎯",
+    "/cars": "🚗",
+    "/travel-packs": "✈️",
+    "/gallery": "📸",
+    "/our-story": "📖",
+    "/contact": "📧",
+  };
+  return icons[href] || "→";
+};
 
 export default function NavbarResponsive({ scrolled }: { scrolled?: boolean }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const locale = pathname?.split("/")[1] === "fr" ? "fr" : "en";
   const [navLinks, setNavLinks] = useState<{ label: string; href: string }[]>(
-    [],
+    []
   );
   const drawerRef = useRef<HTMLDivElement>(null);
 
@@ -68,19 +83,19 @@ export default function NavbarResponsive({ scrolled }: { scrolled?: boolean }) {
         {open && (
           <>
             <Overlay
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.5 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              variants={variants.overlayFade}
+              initial="initial"
+              animate="animate"
+              exit="exit"
               onClick={() => setOpen(false)}
             />
 
             <Drawer
               ref={drawerRef}
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
+              variants={variants.drawerSlide}
+              initial="initial"
+              animate="animate"
+              exit="exit"
             >
               {/* 🧭 Drawer Header */}
               <DrawerHeader>
@@ -101,7 +116,15 @@ export default function NavbarResponsive({ scrolled }: { scrolled?: boolean }) {
                     initial={{ opacity: 0, x: 10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.05 }}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "0.6rem",
+                    }}
                   >
+                    <span style={{ fontSize: "1.4rem" }}>
+                      {getNavIcon(link.href)}
+                    </span>
                     <Link
                       href={`/${locale}${link.href}`}
                       onClick={() => setOpen(false)}

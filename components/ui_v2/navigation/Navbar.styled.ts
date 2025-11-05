@@ -67,33 +67,40 @@ export const NavLinks = styled.div`
   align-items: center;
   gap: ${({ theme }) => theme.spacing.lg};
   flex-wrap: wrap; /* ✅ prevents link overlap on resize */
+`;
 
-  a {
-    position: relative;
-    color: ${({ theme }) => theme.colors.text.primary};
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+/* ✨ Animated Navigation Link with icon hover effect */
+export const NavLink = styled(motion.a)`
+  position: relative;
+  color: ${({ theme }) => theme.colors.text.primary};
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: ${({ theme }) => theme.radii.md};
+  transition: color 0.3s ease;
 
-    &:hover {
-      color: ${({ theme }) => theme.colors.primary};
-    }
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary.main};
+    background: ${({ theme }) => alpha(theme.colors.primary.main, 0.08)};
+  }
 
-    /* 🧵 Animated underline effect */
-    &:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -3px;
-      width: 0%;
-      height: 2px;
-      background: ${({ theme }) => theme.colors.primary};
-      transition: width 0.3s ease;
-    }
+  /* 🎯 Icon animation container */
+  .nav-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
 
-    &:hover:after {
-      width: 100%;
-    }
+  &:hover .nav-icon {
+    opacity: 1;
+    transform: translateX(0);
   }
 `;
 

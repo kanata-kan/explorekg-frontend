@@ -3,22 +3,12 @@
 import { motion, Variants } from "framer-motion";
 import styled from "styled-components";
 import { Container, Typography } from "@/components/ui_v2/foundation";
+import { variants } from "@/lib/motion";
 
 /* --------------------------------------------
-   🎬 Motion preset
+   🎬 Motion preset (using centralized system)
 -------------------------------------------- */
-export const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (custom: number = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: custom * 0.18,
-      duration: 0.75,
-      ease: "easeOut",
-    },
-  }),
-};
+export const fadeInUp: Variants = variants.fadeInUpStagger;
 
 /* --------------------------------------------
    🧱 Styled Components

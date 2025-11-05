@@ -1,18 +1,34 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Nav, Brand, NavLinks } from "./Navbar.styled";
+import { Nav, Brand, NavLinks, NavLink } from "./Navbar.styled";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggleButton from "../toggles/ThemeToggleButton/ThemeToggleButton";
 import LanguageSwitcher from "../toggles/LanguageSwitcher/LanguageSwitcher";
 import { SITE } from "@/config/constants";
+import { variants, interactions } from "@/lib/motion";
 
 /* 🖥️ NavbarDesktop Component
    ------------------------------------------------------------
    - Fetches localized links dynamically (EN / FR)
    - Displays brand, nav links, and toggles (theme/lang)
+   - Features animated nav links with icon hover effects
 */
+
+// Icon mapping for each route
+const getNavIcon = (href: string) => {
+  const icons: Record<string, string> = {
+    "/": "🏠",
+    "/activities": "🎯",
+    "/cars": "🚗",
+    "/travel-packs": "✈️",
+    "/gallery": "📸",
+    "/our-story": "📖",
+    "/contact": "📧",
+  };
+  return icons[href] || "→";
+};
 
 export default function NavbarDesktop({ scrolled }: { scrolled?: boolean }) {
   const pathname = usePathname();
@@ -31,9 +47,9 @@ export default function NavbarDesktop({ scrolled }: { scrolled?: boolean }) {
   return (
     <Nav
       $scrolled={!!scrolled}
-      initial={{ y: -50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.4 }}
+      variants={variants.navbarEntrance}
+      initial="initial"
+      animate="animate"
     >
       {/* 🧭 Brand */}
       <Brand>
@@ -44,9 +60,16 @@ export default function NavbarDesktop({ scrolled }: { scrolled?: boolean }) {
       {/* 🔗 Navigation Links */}
       <NavLinks>
         {navLinks.map((link) => (
-          <Link key={link.href} href={`/${locale}${link.href}`}>
-            {link.label}
-          </Link>
+          <NavLink
+            key={link.href}
+            href={`/${locale}${link.href}`}
+            as={Link}
+            whileHover={interactions.hoverScale}
+            whileTap={interactions.tapScale}
+          >
+            <span>{link.label}</span>
+            <span className="nav-icon">{getNavIcon(link.href)}</span>
+          </NavLink>
         ))}
       </NavLinks>
 
