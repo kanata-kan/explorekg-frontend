@@ -24,7 +24,7 @@ export default function GallerySection_v2({ items }: Props) {
           transition={{ duration: 0.6 }}
         >
           <Typography variant="h2" align="center" color="primary">
-            {t("title")}
+            {t("sectionTitle")}
           </Typography>
 
           <Typography
@@ -33,7 +33,7 @@ export default function GallerySection_v2({ items }: Props) {
             color="tertiary"
             style={{ maxWidth: 680, margin: "0 auto" }}
           >
-            {t.rich("subtitle", {
+            {t.rich("sectionSubtitle", {
               strong: (chunks) => <strong>{chunks}</strong>,
             })}
           </Typography>

@@ -1,0 +1,20 @@
+{
+  "actions": {
+    "viewAll": "Voir tout",
+    "viewDetails": "Voir les détails",
+    "bookNow": "Réserver",
+    "back": "Retour",
+    "submit": "Envoyer",
+    "close": "Fermer"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "cars": "Voitures",
+    "activities": "Activités",
+    "gallery": "Galerie",
+    "contact": "Contact",
+    "ourStory": "Notre Histoire",
+    "travelPacks": "Forfaits"
+  },
+  "welcome": "Bienvenue chez Nomadia Travels!"
+}

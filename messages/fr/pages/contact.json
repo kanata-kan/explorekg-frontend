@@ -1,0 +1,15 @@
+{
+  "title": "Contact — Nomadia Travels",
+  "description": "Des questions ou besoin d'aide ? Contactez Nomadia Travels pour des expériences sur mesure, la location de voitures et des conseils de voyage au Kirghizistan.",
+  "info": {
+    "title": "📌 Informations de contact",
+    "mapLink": "Voir sur la carte"
+  },
+  "socials": {
+    "title": "🌐 Suivez-nous"
+  },
+  "form": {
+    "title": "💬 Envoyez-nous un message",
+    "submit": "Envoyer"
+  }
+}

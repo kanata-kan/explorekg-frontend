@@ -1,0 +1,12 @@
+{
+  "about": "À propos de cette voiture",
+  "book": "Réserver cette voiture",
+  "back": "Retour aux voitures",
+  "seats": "sièges",
+  "fuel": "Type de carburant",
+  "transmission": "Transmission",
+  "luggage": "Bagages",
+  "price": "Prix par jour",
+  "galleryTitle": "Galerie de {name}",
+  "galleryEmpty": "Aucune photo supplémentaire disponible pour cette voiture."
+}

@@ -1,0 +1,20 @@
+{
+  "actions": {
+    "viewAll": "View all",
+    "viewDetails": "View Details",
+    "bookNow": "Book Now",
+    "back": "Back",
+    "submit": "Send",
+    "close": "Close"
+  },
+  "navigation": {
+    "home": "Home",
+    "cars": "Cars",
+    "activities": "Activities",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "ourStory": "Our Story",
+    "travelPacks": "Travel Packs"
+  },
+  "welcome": "Welcome to Nomadia Travels!"
+}

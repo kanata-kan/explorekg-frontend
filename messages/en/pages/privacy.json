@@ -1,0 +1,17 @@
+{
+  "title": "Privacy Policy",
+  "description": "Learn how Nomadia Travels collects, uses, and protects your personal information.",
+  "lastUpdated": "Last updated on",
+  "section1": {
+    "title": "1. Data Collection",
+    "text": "We collect only the information necessary to provide and improve our services, including contact details and booking information submitted through our website forms."
+  },
+  "section2": {
+    "title": "2. Use of Information",
+    "text": "Your information is used solely for communication, personalized travel offers, and service improvements. We never sell or share your data with third parties without consent."
+  },
+  "section3": {
+    "title": "3. Data Protection",
+    "text": "We implement security measures such as encryption and secure storage to protect your data from unauthorized access, alteration, or disclosure."
+  }
+}

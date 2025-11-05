@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useTheme } from "styled-components";
 import { UniversalCard } from "../../components";

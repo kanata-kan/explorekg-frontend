@@ -1,0 +1,12 @@
+{
+  "about": "About this car",
+  "book": "Book this Car",
+  "back": "Back to Cars",
+  "seats": "seats",
+  "fuel": "Fuel Type",
+  "transmission": "Transmission",
+  "luggage": "Luggage",
+  "price": "Price per day",
+  "galleryTitle": "Gallery of {name}",
+  "galleryEmpty": "No additional photos available for this car."
+}

@@ -1,0 +1,15 @@
+{
+  "noImages": "No images available",
+  "loading": "Loading...",
+  "previousImage": "Previous image",
+  "nextImage": "Next image",
+  "goToImage": "Go to image {index}",
+  "currentImage": "Image {current} of {total}",
+  "swipeHint": "← Swipe →",
+  "zoom": "Zoom",
+  "image": "Image",
+  "of": "of",
+  "openGallery": "Open Gallery",
+  "moreImages": "More Images",
+  "backToGallery": "Back to Gallery"
+}
