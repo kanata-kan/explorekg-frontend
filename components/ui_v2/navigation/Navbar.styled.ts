@@ -70,21 +70,26 @@ export const NavLinks = styled.div`
 `;
 
 /* ✨ Animated Navigation Link with icon hover effect */
-export const NavLink = styled(motion.a)`
+export const NavLink = styled(motion.div)`
   position: relative;
-  color: ${({ theme }) => theme.colors.text.primary};
-  text-decoration: none;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.5rem 0.8rem;
-  border-radius: ${({ theme }) => theme.radii.md};
-  transition: color 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
 
-  &:hover {
-    color: ${({ theme }) => theme.colors.primary.main};
-    background: ${({ theme }) => alpha(theme.colors.primary.main, 0.08)};
+  a {
+    color: ${({ theme }) => theme.colors.text.primary};
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: ${({ theme }) => theme.radii.md};
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.primary.main};
+      background: ${({ theme }) => alpha(theme.colors.primary.main, 0.08)};
+    }
   }
 
   /* 🎯 Icon animation container */

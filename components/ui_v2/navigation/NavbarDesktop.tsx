@@ -35,7 +35,7 @@ export default function NavbarDesktop({ scrolled }: { scrolled?: boolean }) {
   const locale = pathname?.split("/")[1] === "fr" ? "fr" : "en";
 
   const [navLinks, setNavLinks] = useState<{ label: string; href: string }[]>(
-    []
+    [],
   );
 
   useEffect(() => {
@@ -62,13 +62,13 @@ export default function NavbarDesktop({ scrolled }: { scrolled?: boolean }) {
         {navLinks.map((link) => (
           <NavLink
             key={link.href}
-            href={`/${locale}${link.href}`}
-            as={Link}
             whileHover={interactions.hoverScale}
             whileTap={interactions.tapScale}
           >
-            <span>{link.label}</span>
-            <span className="nav-icon">{getNavIcon(link.href)}</span>
+            <Link href={`/${locale}${link.href}`}>
+              <span>{link.label}</span>
+              <span className="nav-icon">{getNavIcon(link.href)}</span>
+            </Link>
           </NavLink>
         ))}
       </NavLinks>
